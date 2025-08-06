@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [location] = useLocation();
+
 
   useEffect(() => {
     const handleScroll = () => {

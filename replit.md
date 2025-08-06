@@ -1,12 +1,12 @@
-# Barber Therapy - Premium Barbershop Application
+# Barber Therapy - Premium Barbershop Website
 
 ## Overview
 
-This is a frontend-only static React application for a premium barbershop called "Barber Therapy". The application serves as a business website with appointment booking functionality via Calendly integration, showcasing services, gallery, testimonials, and company information. The project is built purely with React and Vite for static hosting on platforms like Netlify.
+This is a frontend-only static React application for a premium barbershop called "Barber Therapy". The application serves as a business website with appointment booking functionality via Calendly integration, showcasing services, gallery, testimonials, and company information. The project is optimized for static deployment on platforms like Netlify and Vercel.
 
 ## System Architecture
 
-The application follows a full-stack monorepo structure with clear separation between client and server code:
+The application is now configured as a frontend-only static website:
 
 ### Frontend Architecture
 - **Framework**: React 18 with TypeScript
@@ -16,10 +16,14 @@ The application follows a full-stack monorepo structure with clear separation be
 - **State Management**: TanStack Query for server state management
 - **Build Tool**: Vite for fast development and optimized builds
 
-### Static Architecture
+### Frontend Architecture (Static)
+- **Framework**: React 18 with TypeScript
 - **Build Tool**: Vite for fast development and optimized static builds
+- **Routing**: Wouter for lightweight client-side routing
+- **UI Components**: shadcn/ui component library built on Radix UI primitives
+- **Styling**: Tailwind CSS with custom brand colors and design system
 - **Language**: TypeScript with ES modules
-- **Deployment**: Static files only, no server-side processing required
+- **Deployment**: Static files only, optimized for Netlify/Vercel
 - **Development**: Vite dev server with hot module replacement
 
 ### Design System
@@ -87,22 +91,34 @@ The application follows a full-stack monorepo structure with clear separation be
 
 ## Deployment Strategy
 
+### Frontend-Only Deployment
+This project is now optimized for static hosting platforms:
+
+**Netlify Deployment:**
+- Build Command: `npm run build`
+- Publish Directory: `dist`
+- Node Version: 18
+- Auto-deployment from Git repository
+- SPA routing with redirects configured
+
+**Vercel Deployment:**
+- Framework: Vite
+- Build Command: `npm run build`
+- Output Directory: `dist`
+- Auto-deployment from Git repository
+- Optimized caching headers for assets
+
 ### Development Environment
-- **Replit Configuration**: Node.js 20, Web, PostgreSQL 16 modules
-- **Hot Reload**: Vite dev server with Express middleware
-- **Port Configuration**: Local port 5000, external port 80
-- **File Watching**: Automatic restart on server file changes
+- **Local Development**: Vite dev server on port 3000
+- **Hot Reload**: Fast refresh with Vite HMR
+- **Type Checking**: TypeScript compilation
+- **CSS Processing**: Tailwind + PostCSS pipeline
 
-### Production Build
-- **Client Build**: Vite builds React app to `dist/public`
-- **Server Build**: ESBuild bundles Express server to `dist/index.js`
-- **Static Serving**: Production Express serves built client files
-- **Environment**: NODE_ENV-based configuration switching
-
-### Database Setup
-- **Drizzle Migrations**: Schema changes via `drizzle-kit push`
-- **Environment Variables**: DATABASE_URL required for PostgreSQL connection
-- **Connection Pooling**: Neon serverless driver for efficient connections
+### Build Optimization
+- **Bundle Splitting**: Vendor and UI chunks separated
+- **Tree Shaking**: Unused code elimination
+- **Minification**: ESBuild for fast builds
+- **Asset Optimization**: Automatic compression and caching
 
 ## Changelog
 
