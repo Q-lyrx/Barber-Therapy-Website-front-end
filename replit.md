@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a full-stack React application for a premium barbershop called "Barber Therapy". The application serves as a business website with appointment booking functionality, showcasing services, gallery, testimonials, and company information. The project uses a modern tech stack with React frontend, Express backend, and is configured for deployment on Replit.
+This is a frontend-only static React application for a premium barbershop called "Barber Therapy". The application serves as a business website with appointment booking functionality via Calendly integration, showcasing services, gallery, testimonials, and company information. The project is built purely with React and Vite for static hosting on platforms like Netlify.
 
 ## System Architecture
 
@@ -16,12 +16,11 @@ The application follows a full-stack monorepo structure with clear separation be
 - **State Management**: TanStack Query for server state management
 - **Build Tool**: Vite for fast development and optimized builds
 
-### Backend Architecture
-- **Runtime**: Node.js with Express.js framework
+### Static Architecture
+- **Build Tool**: Vite for fast development and optimized static builds
 - **Language**: TypeScript with ES modules
-- **Database ORM**: Drizzle ORM configured for PostgreSQL
-- **Session Management**: Prepared for connect-pg-simple sessions
-- **Development**: Hot reload with Vite middleware integration
+- **Deployment**: Static files only, no server-side processing required
+- **Development**: Vite dev server with hot module replacement
 
 ### Design System
 - **Brand Colors**: Black (#000000), Gold (#D4AF37), White (#FFFFFF)
