@@ -1,0 +1,163 @@
+export default function ContactSection() {
+  return (
+    <section id="contact" className="py-24 bg-brand-dark">
+      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-brand-white mb-4">
+            Get In <span className="text-brand-gold">Touch</span>
+          </h2>
+          <p className="text-brand-white/80 text-lg max-w-2xl mx-auto">
+            Ready to experience the finest in men's grooming? Contact us to schedule your appointment or ask any questions.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div className="bg-brand-black/50 p-8 rounded-lg border border-brand-gold/20">
+              <h3 className="text-2xl font-bold text-brand-white mb-6">Visit Our Shop</h3>
+              
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <i className="fas fa-map-marker-alt text-brand-gold text-xl w-6"></i>
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-brand-white font-semibold mb-1">Address</h4>
+                    <p className="text-brand-white/80">
+                      123 Financial Street<br />
+                      Downtown District, City 12345
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <i className="fas fa-phone text-brand-gold text-xl w-6"></i>
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-brand-white font-semibold mb-1">Phone</h4>
+                    <p className="text-brand-white/80">(555) 123-4567</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <i className="fas fa-envelope text-brand-gold text-xl w-6"></i>
+                  </div>
+                  <div className="ml-4">
+                    <h4 className="text-brand-white font-semibold mb-1">Email</h4>
+                    <p className="text-brand-white/80">info@barbertherapy.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Business Hours */}
+            <div className="bg-brand-black/50 p-8 rounded-lg border border-brand-gold/20">
+              <h3 className="text-2xl font-bold text-brand-white mb-6">Business Hours</h3>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-brand-white">Tuesday - Friday</span>
+                  <span className="text-brand-gold font-semibold">9 AM - 7 PM</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-brand-white">Saturday</span>
+                  <span className="text-brand-gold font-semibold">8 AM - 6 PM</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-brand-white">Sunday</span>
+                  <span className="text-brand-gold font-semibold">10 AM - 4 PM</span>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-brand-white">Monday</span>
+                  <span className="text-red-400 font-semibold">Closed</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="bg-brand-black/50 p-8 rounded-lg border border-brand-gold/20">
+            <h3 className="text-2xl font-bold text-brand-white mb-6">Send Us a Message</h3>
+            <form className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label htmlFor="firstName" className="block text-brand-white font-medium mb-2">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    data-testid="input-first-name"
+                    className="w-full px-4 py-3 bg-brand-black border border-brand-gold/30 rounded-lg text-brand-white placeholder-brand-white/50 focus:outline-none focus:border-brand-gold transition-colors"
+                    placeholder="Your first name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="lastName" className="block text-brand-white font-medium mb-2">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    data-testid="input-last-name"
+                    className="w-full px-4 py-3 bg-brand-black border border-brand-gold/30 rounded-lg text-brand-white placeholder-brand-white/50 focus:outline-none focus:border-brand-gold transition-colors"
+                    placeholder="Your last name"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="email" className="block text-brand-white font-medium mb-2">
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  data-testid="input-email"
+                  className="w-full px-4 py-3 bg-brand-black border border-brand-gold/30 rounded-lg text-brand-white placeholder-brand-white/50 focus:outline-none focus:border-brand-gold transition-colors"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="phone" className="block text-brand-white font-medium mb-2">
+                  Phone (Optional)
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  data-testid="input-phone"
+                  className="w-full px-4 py-3 bg-brand-black border border-brand-gold/30 rounded-lg text-brand-white placeholder-brand-white/50 focus:outline-none focus:border-brand-gold transition-colors"
+                  placeholder="(555) 123-4567"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-brand-white font-medium mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  rows={4}
+                  data-testid="textarea-message"
+                  className="w-full px-4 py-3 bg-brand-black border border-brand-gold/30 rounded-lg text-brand-white placeholder-brand-white/50 focus:outline-none focus:border-brand-gold transition-colors resize-none"
+                  placeholder="Tell us what you're looking for or ask any questions..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                data-testid="button-send-message"
+                className="w-full bg-brand-gold text-brand-black font-semibold py-3 px-6 rounded-lg hover:bg-brand-dark-gold transition-colors duration-300"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

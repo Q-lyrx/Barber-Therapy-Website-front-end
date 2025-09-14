@@ -20,8 +20,9 @@ export default function Navigation() {
     { href: "/#home", label: "Home" },
     { href: "/#gallery", label: "Gallery" },
     { href: "/#services", label: "Services" },
+    { href: "/#testimonials", label: "Testimonials" },
     { href: "/#about", label: "About" },
-    { href: "/#testimonials", label: "Reviews" },
+    { href: "/#contact", label: "Contact" },
   ];
 
   const handleNavClick = (href: string) => {
