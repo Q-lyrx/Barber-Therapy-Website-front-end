@@ -44,8 +44,14 @@ export default function Navigation() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          <div className="flex-shrink-0">
-            <Link href="/">
+          <div className="flex-shrink-0 flex items-center space-x-3">
+            <Link href="/" className="flex items-center space-x-3">
+              <img 
+                src={logoImage} 
+                alt="Barber Therapy Logo" 
+                className="h-10 w-auto cursor-pointer"
+                data-testid="logo-image"
+              />
               <h1 className="text-2xl font-bold text-brand-gold cursor-pointer">
                 Barber Therapy
               </h1>
@@ -53,8 +59,8 @@ export default function Navigation() {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center">
-            <div className="flex items-baseline space-x-8">
+          <div className="hidden md:block">
+            <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.href}
@@ -70,28 +76,10 @@ export default function Navigation() {
                 </Button>
               </Link>
             </div>
-            
-            {/* Logo in top right corner */}
-            <div className="ml-8">
-              <img 
-                src={logoImage} 
-                alt="Barber Therapy Logo" 
-                className="h-12 w-auto"
-                data-testid="logo-image"
-              />
-            </div>
           </div>
           
-          {/* Mobile right section */}
-          <div className="md:hidden flex items-center space-x-4">
-            {/* Mobile logo */}
-            <img 
-              src={logoImage} 
-              alt="Barber Therapy Logo" 
-              className="h-10 w-auto"
-              data-testid="logo-image-mobile"
-            />
-            {/* Mobile menu button */}
+          {/* Mobile menu button */}
+          <div className="md:hidden">
             <button
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
