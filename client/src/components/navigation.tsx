@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import logoImage from "../assets/barber-therapy-logo.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [location, setLocation] = useLocation();
 
 
   useEffect(() => {
@@ -36,6 +37,19 @@ export default function Navigation() {
     }
   };
 
+  const handleHomeClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setIsMenuOpen(false);
+    
+    if (location === "/") {
+      // If already on home page, scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      // If on different page, navigate to home
+      setLocation("/");
+    }
+  };
+
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -45,7 +59,12 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center space-x-3">
-            <Link href="/" className="flex items-center space-x-3">
+            <a 
+              href="/" 
+              onClick={handleHomeClick}
+              className="flex items-center space-x-3"
+              data-testid="home-link"
+            >
               <img 
                 src={logoImage} 
                 alt="Barber Therapy Logo" 
@@ -55,7 +74,7 @@ export default function Navigation() {
               <h1 className="text-2xl font-bold text-brand-gold cursor-pointer">
                 Barber Therapy
               </h1>
-            </Link>
+            </a>
           </div>
           
           {/* Desktop Navigation */}
