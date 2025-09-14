@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import logoImage from "../assets/barber-therapy-logo.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -52,8 +53,8 @@ export default function Navigation() {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-8">
+          <div className="hidden md:flex items-center">
+            <div className="flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <button
                   key={item.href}
@@ -69,10 +70,28 @@ export default function Navigation() {
                 </Button>
               </Link>
             </div>
+            
+            {/* Logo in top right corner */}
+            <div className="ml-8">
+              <img 
+                src={logoImage} 
+                alt="Barber Therapy Logo" 
+                className="h-12 w-auto"
+                data-testid="logo-image"
+              />
+            </div>
           </div>
           
-          {/* Mobile menu button */}
-          <div className="md:hidden">
+          {/* Mobile right section */}
+          <div className="md:hidden flex items-center space-x-4">
+            {/* Mobile logo */}
+            <img 
+              src={logoImage} 
+              alt="Barber Therapy Logo" 
+              className="h-10 w-auto"
+              data-testid="logo-image-mobile"
+            />
+            {/* Mobile menu button */}
             <button
               type="button"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
