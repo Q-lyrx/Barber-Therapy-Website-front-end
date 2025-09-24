@@ -9,19 +9,20 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-75 contrast-110" 
         style={{
           backgroundImage: `url(${barbershopHeroImage})`
         }}
       />
-      <div className="absolute inset-0 bg-brand-black/75" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" />
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
+        <div className="inline-block rounded-2xl bg-black/60 backdrop-blur-sm px-6 py-6 md:px-10 md:py-8 shadow-2xl ring-1 ring-white/5">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up drop-shadow-2xl">
           <span className="text-brand-gold drop-shadow-2xl">Experience</span><br />
           <span className="text-brand-white drop-shadow-2xl">Barber</span><br />
           <span className="text-brand-gold drop-shadow-2xl">Therapy</span>
         </h1>
-        <p className="text-xl md:text-2xl mb-8 leading-relaxed animate-fade-in-up drop-shadow-lg bg-[transparent] text-[#9ca3afff] font-semibold">
+        <p className="text-xl md:text-2xl text-brand-white/95 mb-8 font-light leading-relaxed animate-fade-in-up drop-shadow-lg">
           A space where you can transform both your look and your mindset all at once. It is more than just a haircut.
         </p>
         <div className="flex justify-center animate-fade-in-up">
@@ -31,6 +32,7 @@ export default function HeroSection() {
           >
             Our clippers got PhDs in glow ups.
           </Button>
+        </div>
         </div>
       </div>
       {/* Scroll indicator */}
