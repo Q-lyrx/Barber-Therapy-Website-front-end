@@ -15,14 +15,13 @@ export default function HeroSection() {
         }}
       />
       <div className="absolute inset-0 bg-brand-black/75" />
-      
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up drop-shadow-2xl">
           <span className="text-brand-gold drop-shadow-2xl">Experience</span><br />
           <span className="text-brand-white drop-shadow-2xl">Barber</span><br />
           <span className="text-brand-gold drop-shadow-2xl">Therapy</span>
         </h1>
-        <p className="text-xl md:text-2xl text-brand-white/95 mb-8 font-light leading-relaxed animate-fade-in-up drop-shadow-lg">
+        <p className="text-xl md:text-2xl mb-8 leading-relaxed animate-fade-in-up drop-shadow-lg bg-[transparent] text-[#ffffffff] font-semibold">
           A space where you can transform both your look and your mindset all at once. It is more than just a haircut.
         </p>
         <div className="flex justify-center animate-fade-in-up">
@@ -34,7 +33,6 @@ export default function HeroSection() {
           </Button>
         </div>
       </div>
-      
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <i className="fas fa-chevron-down text-brand-gold text-2xl"></i>
