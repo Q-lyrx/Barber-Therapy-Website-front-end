@@ -1,4 +1,3 @@
-import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import barbershopHeroImage from "@/assets/images/barbershop-hero.webp";
 
@@ -26,18 +25,12 @@ export default function HeroSection() {
         <p className="text-xl md:text-2xl text-brand-white/95 mb-8 font-light leading-relaxed animate-fade-in-up drop-shadow-lg">
           A space where you can transform both your look and your mindset all at once. It is more than just a haircut.
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
-          <Link href="/booking">
-            <Button className="bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold">
-              Book Appointment
-            </Button>
-          </Link>
+        <div className="flex justify-center animate-fade-in-up">
           <Button 
-            variant="outline"
             onClick={scrollToServices}
-            className="border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-black transition-all duration-300 px-8 py-4 text-lg font-semibold"
+            className="bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-all duration-300 transform hover:scale-105 px-8 py-4 text-lg font-semibold"
           >
-            View Services
+            Our clippers got PhDs in glow ups.
           </Button>
         </div>
       </div>
