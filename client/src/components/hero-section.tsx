@@ -1,5 +1,6 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import barbershopHeroImage from "@/assets/images/barbershop-hero.webp";
 
 export default function HeroSection() {
   const scrollToServices = () => {
@@ -11,7 +12,7 @@ export default function HeroSection() {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2074&h=1200')"
+          backgroundImage: `url(${barbershopHeroImage})`
         }}
       />
       <div className="absolute inset-0 bg-brand-black/60" />
