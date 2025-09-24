@@ -9,7 +9,7 @@ packages = ["imagemagick"]
 [deployment]
 deploymentTarget = "autoscale"
 build = ["npm", "run", "build"]
-run = ["sh", "-c", "cd client && npm run preview"]
+run = ["npm", "run", "start"]
 
 [[ports]]
 localPort = 5000
@@ -20,7 +20,7 @@ localPort = 41663
 externalPort = 3001
 
 [workflows]
-runButton = "Start Static Site"
+runButton = "Project"
 
 [[workflows.workflow]]
 name = "Project"
@@ -39,12 +39,3 @@ author = "agent"
 task = "shell.exec"
 args = "npm run dev"
 waitForPort = 5000
-
-[[workflows.workflow]]
-name = "Start Static Site"
-author = 42591375
-mode = "sequential"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "cd client && npm run dev"
