@@ -51,7 +51,7 @@ export default function GallerySection() {
           {featuredImages.map((image, index) => (
             <div 
               key={index}
-              className="group cursor-pointer overflow-hidden rounded-lg h-48"
+              className="group cursor-pointer overflow-hidden rounded-lg h-64"
               onClick={() => openLightbox(index)}
               data-testid={`featured-image-${index}`}
             >
