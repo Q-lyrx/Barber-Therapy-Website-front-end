@@ -53,7 +53,7 @@ export default function Navigation() {
   return (
     <nav 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-brand-black/95 backdrop-blur-md" : "bg-brand-black/90 backdrop-blur-md"
+        isScrolled ? "bg-brand-black/98 backdrop-blur-md shadow-lg" : "bg-brand-black/95 backdrop-blur-md"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -71,7 +71,7 @@ export default function Navigation() {
                 className="h-10 w-auto cursor-pointer"
                 data-testid="logo-image"
               />
-              <h1 className="text-2xl font-bold text-brand-gold cursor-pointer">
+              <h1 className="text-2xl font-bold text-brand-gold cursor-pointer drop-shadow-lg">
                 Barber Therapy
               </h1>
             </a>
@@ -84,7 +84,7 @@ export default function Navigation() {
                 <button
                   key={item.href}
                   onClick={() => handleNavClick(item.href)}
-                  className="text-brand-white hover:text-brand-gold transition-colors duration-300 font-medium"
+                  className="text-brand-white hover:text-brand-gold transition-colors duration-300 font-medium drop-shadow-md"
                 >
                   {item.label}
                 </button>
@@ -118,7 +118,7 @@ export default function Navigation() {
               <button
                 key={item.href}
                 onClick={() => handleNavClick(item.href)}
-                className="block w-full text-left px-3 py-2 text-brand-white hover:text-brand-gold transition-colors duration-300"
+                className="block w-full text-left px-3 py-2 text-brand-white hover:text-brand-gold transition-colors duration-300 drop-shadow-md"
               >
                 {item.label}
               </button>

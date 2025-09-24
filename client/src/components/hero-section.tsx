@@ -15,15 +15,15 @@ export default function HeroSection() {
           backgroundImage: `url(${barbershopHeroImage})`
         }}
       />
-      <div className="absolute inset-0 bg-brand-black/60" />
+      <div className="absolute inset-0 bg-brand-black/75" />
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up">
-          <span className="text-brand-gold">Experience</span><br />
-          <span className="text-brand-white">Barber</span><br />
-          <span className="text-brand-gold">Therapy</span>
+        <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up drop-shadow-2xl">
+          <span className="text-brand-gold drop-shadow-2xl">Experience</span><br />
+          <span className="text-brand-white drop-shadow-2xl">Barber</span><br />
+          <span className="text-brand-gold drop-shadow-2xl">Therapy</span>
         </h1>
-        <p className="text-xl md:text-2xl text-brand-white/90 mb-8 font-light leading-relaxed animate-fade-in-up">
+        <p className="text-xl md:text-2xl text-brand-white/95 mb-8 font-light leading-relaxed animate-fade-in-up drop-shadow-lg">
           A space where you can transform both your look and your mindset all at once. It is more than just a haircut.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up">
