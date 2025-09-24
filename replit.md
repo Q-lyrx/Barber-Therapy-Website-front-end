@@ -6,15 +6,7 @@ This is a frontend-only static React application for a premium barbershop called
 
 ## System Architecture
 
-The application is now configured as a frontend-only static website:
-
-### Frontend Architecture
-- **Framework**: React 18 with TypeScript
-- **Routing**: Wouter for lightweight client-side routing
-- **UI Components**: shadcn/ui component library built on Radix UI primitives
-- **Styling**: Tailwind CSS with custom brand colors and design system
-- **State Management**: TanStack Query for server state management
-- **Build Tool**: Vite for fast development and optimized builds
+The application is fully configured as a static website with no backend dependencies:
 
 ### Frontend Architecture (Static)
 - **Framework**: React 18 with TypeScript
@@ -44,32 +36,24 @@ The application is now configured as a frontend-only static website:
 7. **Footer**: Contact information and social media links
 8. **Booking Page**: Dedicated appointment scheduling interface
 
-### Server-Side Structure
-1. **Routes Handler**: Centralized route registration system
-2. **Storage Interface**: Abstracted data layer with in-memory implementation
-3. **Vite Integration**: Development server with HMR support
-4. **Error Handling**: Centralized error middleware
-
-### Database Schema
-- **Users Table**: ID, username, password fields
-- **Drizzle ORM**: Type-safe database operations
-- **Zod Validation**: Schema validation for user inputs
+### Project Structure
+1. **Client Directory**: Contains all React frontend code
+2. **Static Assets**: Compressed WebP images and optimized assets
+3. **Build Output**: Generated static files in client/dist directory
+4. **Deployment Configs**: Netlify and Vercel configuration files
 
 ## Data Flow
 
-1. **Client Requests**: React components make API calls using TanStack Query
-2. **Server Processing**: Express routes handle requests via storage interface
-3. **Database Operations**: Drizzle ORM manages PostgreSQL interactions
-4. **Response Handling**: JSON responses with error handling middleware
-5. **State Updates**: TanStack Query manages client-side cache updates
+1. **Static Content**: All content is rendered client-side from React components
+2. **External Integrations**: Calendly widget for appointment booking
+3. **Asset Loading**: Optimized image loading with WebP compression
+4. **Client-Side Navigation**: Wouter handles routing without server requests
 
 ## External Dependencies
 
 ### Core Framework Dependencies
-- React ecosystem (React, React DOM, React Query)
-- Express.js with middleware support
-- Drizzle ORM with PostgreSQL adapter
-- Vite with React plugin
+- React ecosystem (React, React DOM, Wouter)
+- Vite with React plugin for development and building
 
 ### UI Dependencies
 - Radix UI primitives for accessible components
@@ -79,15 +63,13 @@ The application is now configured as a frontend-only static website:
 
 ### Development Dependencies
 - TypeScript for type safety
-- ESBuild for server bundling
 - PostCSS with Autoprefixer
-- Replit-specific development tools
+- Tailwind CSS plugins
 
 ### External Services
 - **Calendly Integration**: Embedded booking widget for appointments
-- **Neon Database**: PostgreSQL hosting (via @neondatabase/serverless)
 - **Google Fonts**: Playfair Display and Montserrat typography
-- **Unsplash Images**: Professional barbershop photography
+- **Compressed Images**: WebP optimized barbershop photography
 
 ## Deployment Strategy
 
@@ -122,8 +104,10 @@ This project is now optimized for static hosting platforms:
 
 ## Changelog
 
-Changelog:
-- June 26, 2025. Initial setup
+- September 24, 2025: Removed all backend code and configured for static hosting
+- September 24, 2025: Implemented comprehensive gallery with WebP image compression
+- September 24, 2025: Added lightbox functionality and carousel navigation
+- June 26, 2025: Initial setup
 
 ## User Preferences
 
