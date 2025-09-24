@@ -73,6 +73,17 @@
 }
 
 /* Custom utility classes */
+@layer utilities {
+  .scrollbar-hide {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
 .brand-black { color: var(--brand-black); }
 .bg-brand-black { background-color: var(--brand-black); }
 .brand-gold { color: var(--brand-gold); }
