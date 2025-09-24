@@ -30,11 +30,8 @@ export default function GallerySection() {
     <section id="gallery" className="py-24 bg-brand-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-brand-gold font-semibold text-sm uppercase tracking-wider">
+          <h2 className="text-5xl md:text-6xl font-bold text-brand-gold mb-6">
             Gallery
-          </span>
-          <h2 className="text-4xl md:text-5xl font-bold text-brand-white mt-4 mb-6">
-            Our Gallery
           </h2>
           <p className="text-xl text-brand-white/80 max-w-3xl mx-auto">
             Warning: These pics might make you book an appointment.
