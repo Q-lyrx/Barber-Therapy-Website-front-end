@@ -1,31 +1,39 @@
-const galleryImages = [
-  {
-    src: "https://images.unsplash.com/photo-1621605815971-fbc98d665033?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    alt: "Luxury barbershop interior"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    alt: "Professional barber tools"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1503951914875-452162b0f3f1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    alt: "Stylish men's haircut"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1560066984-138dadb4c035?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    alt: "Elegant barbershop seating"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    alt: "Classic barbershop atmosphere"
-  },
-  {
-    src: "https://images.unsplash.com/photo-1587049352851-8d4e89133924?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-    alt: "Modern barbershop interior"
-  }
+import { useState } from 'react';
+import ImageLightbox from '@/components/image-lightbox';
+import GalleryCarousel from '@/components/gallery-carousel';
+
+// Import all gallery images
+import gallery1 from '@/assets/gallery/gallery-1.webp';
+import gallery2 from '@/assets/gallery/gallery-2.webp';
+import gallery3 from '@/assets/gallery/gallery-3.webp';
+import gallery4 from '@/assets/gallery/gallery-4.webp';
+import gallery5 from '@/assets/gallery/gallery-5.webp';
+import gallery6 from '@/assets/gallery/gallery-6.webp';
+import gallery7 from '@/assets/gallery/gallery-7.webp';
+import gallery8 from '@/assets/gallery/gallery-8.webp';
+import gallery9 from '@/assets/gallery/gallery-9.webp';
+import gallery10 from '@/assets/gallery/gallery-10.webp';
+import gallery11 from '@/assets/gallery/gallery-11.webp';
+import gallery12 from '@/assets/gallery/gallery-12.webp';
+import gallery13 from '@/assets/gallery/gallery-13.webp';
+
+const allImages = [
+  gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, 
+  gallery8, gallery9, gallery10, gallery11, gallery12, gallery13
 ];
 
+const featuredImages = allImages.slice(0, 4);
+const carouselImages = allImages.slice(4);
+
 export default function GallerySection() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
   return (
     <section id="gallery" className="py-24 bg-brand-black">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -37,22 +45,40 @@ export default function GallerySection() {
             Warning: These pics might make you book an appointment.
           </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {galleryImages.map((image, index) => (
+
+        {/* Featured Images Grid (First 4) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {featuredImages.map((image, index) => (
             <div 
               key={index}
-              className="group cursor-pointer overflow-hidden rounded-lg"
+              className="group cursor-pointer overflow-hidden rounded-lg aspect-square"
+              onClick={() => openLightbox(index)}
+              data-testid={`featured-image-${index}`}
             >
               <img 
-                src={image.src}
-                alt={image.alt}
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                src={image}
+                alt={`Featured barbershop work ${index + 1}`}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
               />
             </div>
           ))}
         </div>
+
+        {/* Carousel for Remaining Images */}
+        <GalleryCarousel 
+          images={carouselImages}
+          onImageClick={openLightbox}
+        />
       </div>
+
+      {/* Image Lightbox */}
+      <ImageLightbox
+        images={allImages}
+        isOpen={lightboxOpen}
+        initialIndex={lightboxIndex}
+        onClose={() => setLightboxOpen(false)}
+      />
     </section>
   );
 }
