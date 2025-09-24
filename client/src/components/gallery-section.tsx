@@ -34,10 +34,10 @@ export default function GallerySection() {
             Gallery
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-brand-white mt-4 mb-6">
-            Our Craft in Action
+            Our Gallery
           </h2>
           <p className="text-xl text-brand-white/80 max-w-3xl mx-auto">
-            Take a look at our premium barbershop and some of our finest work
+            Warning: These pics might make you book an appointment.
           </p>
         </div>
         
