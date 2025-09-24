@@ -16,7 +16,7 @@ export default function HeroSection() {
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" />
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
-        <div className="inline-block rounded-2xl bg-black/60 backdrop-blur-sm px-6 py-6 md:px-10 md:py-8 shadow-2xl ring-1 ring-white/5">
+        <div className="inline-block rounded-2xl bg-black/35 backdrop-blur-[2px] px-6 py-6 md:px-10 md:py-8 shadow-2xl ring-1 ring-white/5">
         <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight animate-fade-in-up drop-shadow-2xl">
           <span className="text-brand-gold drop-shadow-2xl">Experience</span><br />
           <span className="text-brand-white drop-shadow-2xl">Barber</span><br />
