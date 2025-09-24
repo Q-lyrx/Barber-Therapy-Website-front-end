@@ -47,11 +47,11 @@ export default function GallerySection() {
         </div>
 
         {/* Featured Images Grid (First 4) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {featuredImages.map((image, index) => (
             <div 
               key={index}
-              className="group cursor-pointer overflow-hidden rounded-lg aspect-square"
+              className="group cursor-pointer overflow-hidden rounded-lg h-48"
               onClick={() => openLightbox(index)}
               data-testid={`featured-image-${index}`}
             >
