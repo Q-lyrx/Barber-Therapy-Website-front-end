@@ -53,26 +53,26 @@ export default function ContactSection() {
               </div>
             </div>
 
-            {/* Business Hours */}
+            {/* Availability */}
             <div className="bg-brand-black/50 p-8 rounded-lg border border-brand-gold/20">
-              <h3 className="text-2xl font-bold text-brand-white mb-6">Business Hours</h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-brand-white">Tuesday - Friday</span>
-                  <span className="text-brand-gold font-semibold">9 AM - 7 PM</span>
+              <h3 className="text-2xl font-bold text-brand-white mb-6">Availability</h3>
+              <div className="space-y-4">
+                <p className="text-brand-white/90 leading-relaxed">
+                  We are proud to offer 24-hour service to accommodate your busy schedule.
+                </p>
+                <div className="space-y-3">
+                  <div className="border-l-2 border-brand-gold pl-4">
+                    <h4 className="text-brand-gold font-semibold text-lg">Standard Services</h4>
+                    <p className="text-brand-white">Available 24/7</p>
+                  </div>
+                  <div className="border-l-2 border-brand-gold pl-4">
+                    <h4 className="text-brand-gold font-semibold text-lg">Premium After-Hours</h4>
+                    <p className="text-brand-white">Starting 8:00 PM</p>
+                  </div>
                 </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-brand-white">Saturday</span>
-                  <span className="text-brand-gold font-semibold">8 AM - 6 PM</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-brand-white">Sunday</span>
-                  <span className="text-brand-gold font-semibold">10 AM - 4 PM</span>
-                </div>
-                <div className="flex justify-between items-center">
-                  <span className="text-brand-white">Monday</span>
-                  <span className="text-red-400 font-semibold">Closed</span>
-                </div>
+                <p className="text-brand-white/80 text-sm italic">
+                  For after-hours premium services and special accommodations, please contact us directly for arrangements and pricing details.
+                </p>
               </div>
             </div>
           </div>

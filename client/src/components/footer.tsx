@@ -43,24 +43,26 @@ export default function Footer() {
           </div>
           
           <div>
-            <h4 className="text-lg font-semibold text-brand-white mb-4">Hours</h4>
-            <div className="space-y-2 text-brand-white/80 text-sm">
-              <div className="flex justify-between">
-                <span>Tuesday - Friday</span>
-                <span>9 AM - 7 PM</span>
+            <h4 className="text-lg font-semibold text-brand-white mb-4">Availability</h4>
+            <div className="space-y-3 text-brand-white/80 text-sm">
+              <div>
+                <p className="text-brand-white/90 mb-2">
+                  We are proud to offer 24-hour service to accommodate your busy schedule.
+                </p>
               </div>
-              <div className="flex justify-between">
-                <span>Saturday</span>
-                <span>8 AM - 6 PM</span>
+              <div className="space-y-2">
+                <div className="border-l-2 border-brand-gold pl-3">
+                  <div className="text-brand-gold font-semibold">Standard Services</div>
+                  <div>Available 24/7</div>
+                </div>
+                <div className="border-l-2 border-brand-gold pl-3">
+                  <div className="text-brand-gold font-semibold">Premium After-Hours</div>
+                  <div>Starting 8:00 PM</div>
+                </div>
               </div>
-              <div className="flex justify-between">
-                <span>Sunday</span>
-                <span>10 AM - 4 PM</span>
-              </div>
-              <div className="flex justify-between">
-                <span>Monday</span>
-                <span className="text-brand-gold">Closed</span>
-              </div>
+              <p className="text-brand-white/70 text-xs italic">
+                For after-hours premium services, please contact us directly.
+              </p>
             </div>
           </div>
         </div>
