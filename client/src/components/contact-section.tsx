@@ -13,12 +13,12 @@ export default function ContactSection() {
         <div className="text-center mb-16">
           <div className="inline-block">
             <h2 className="text-4xl lg:text-5xl font-bold text-brand-white mb-4 relative">
-              Get In Touch
+              Contact Us
               <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent"></div>
             </h2>
           </div>
           <p className="text-brand-white/80 text-lg max-w-2xl mx-auto mt-6">
-            Ready to experience the finest in men's grooming? Contact us to schedule your appointment or ask any questions.
+            Have questions? Contact us. We'd love to hear from you!
           </p>
           <div className="flex justify-center mt-6">
             <div className="w-20 h-0.5 bg-brand-gold"></div>
