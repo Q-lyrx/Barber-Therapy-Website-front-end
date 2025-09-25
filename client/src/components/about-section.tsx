@@ -27,7 +27,7 @@ export default function AboutSection() {
                 <div className="text-sm text-brand-white/70 uppercase tracking-wide">Service Available</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-brand-gold">150+</div>
+                <div className="text-3xl font-bold text-brand-gold">1000+</div>
                 <div className="text-sm text-brand-white/70 uppercase tracking-wide">Happy Clients</div>
               </div>
               <div className="text-center">
