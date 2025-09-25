@@ -101,11 +101,13 @@ export default function ContactSection() {
             <h3 className="text-2xl font-bold text-brand-white mb-6 text-center">Find Us</h3>
             <div className="h-96 rounded-lg overflow-hidden">
               <iframe 
-                src="https://storage.googleapis.com/maps-solutions-fzlrpwv5yq/locator-plus/opik/locator-plus.html"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.3905395048584!2d-79.75092098450293!3d43.65813597912!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b1544876e2f35%3A0x4457789336f7a586!2sBarber%20Therapy!5e0!3m2!1sen!2sca!4v1234567890123!5m2!1sen!2sca"
                 width="100%" 
                 height="100%"
                 style={{border: 0}}
+                allowFullScreen={true}
                 loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
                 data-testid="map-iframe"
               />
             </div>
