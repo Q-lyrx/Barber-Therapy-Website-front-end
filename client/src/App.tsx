@@ -1,5 +1,5 @@
 import { Switch, Route } from "wouter";
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
@@ -7,6 +7,9 @@ import NotFound from "@/pages/not-found";
 
 // Lazy load the booking page for code splitting
 const Booking = lazy(() => import("@/pages/booking"));
+
+// Prefetch booking page chunk for instant navigation
+const preloadBooking = () => import('@/pages/booking');
 
 // Loading component for Suspense fallback
 function LoadingSpinner() {
@@ -35,6 +38,16 @@ function Router() {
 }
 
 function App() {
+  // Idle prefetch booking page after initial render
+  useEffect(() => {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(preloadBooking);
+    } else {
+      // Fallback for browsers without requestIdleCallback
+      setTimeout(preloadBooking, 1500);
+    }
+  }, []);
+
   return (
     <TooltipProvider>
       <Toaster />

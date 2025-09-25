@@ -3,6 +3,9 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import logoImage from "../assets/barber-therapy-logo.png";
 
+// Prefetch booking page chunk for instant navigation
+const preloadBooking = () => import('@/pages/booking');
+
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -90,7 +93,12 @@ export default function Navigation() {
                 </button>
               ))}
               <Link href="/booking">
-                <Button className="bg-brand-gold text-brand-black hover:bg-brand-dark-gold font-semibold">
+                <Button 
+                  className="bg-brand-gold text-brand-black hover:bg-brand-dark-gold font-semibold"
+                  onMouseEnter={preloadBooking}
+                  onFocus={preloadBooking}
+                  onTouchStart={preloadBooking}
+                >
                   Book Now
                 </Button>
               </Link>
@@ -127,6 +135,9 @@ export default function Navigation() {
               <Button 
                 className="w-full mt-4 mx-3 bg-brand-gold text-brand-black hover:bg-brand-dark-gold font-semibold"
                 onClick={() => setIsMenuOpen(false)}
+                onMouseEnter={preloadBooking}
+                onFocus={preloadBooking}
+                onTouchStart={preloadBooking}
               >
                 Book Now
               </Button>
