@@ -25,8 +25,8 @@ const LazyImage = memo(function LazyImage({ src, alt, className = '', onClick, p
         loading="lazy"
       />
       {!isLoaded && (
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-black/20 to-brand-black/40 flex items-center justify-center">
-          <div className="w-8 h-8 border-2 border-brand-gold border-t-transparent rounded-full animate-spin"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-black/5 to-brand-black/20 backdrop-blur-sm">
+          <div className="w-full h-full bg-brand-black/10 animate-pulse"></div>
         </div>
       )}
     </div>

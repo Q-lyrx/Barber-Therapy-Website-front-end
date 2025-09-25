@@ -20,8 +20,8 @@ export function useLazyImage({ src, placeholder }: UseLazyImageProps) {
         }
       },
       {
-        threshold: 0.1,
-        rootMargin: '50px',
+        threshold: 0,
+        rootMargin: '300px 0px',
       }
     );
 
