@@ -93,14 +93,14 @@ export default function ServicesSection() {
     <section id="services" className="py-24 bg-brand-dark">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-brand-gold mb-6">
-            Services & Packages
+          <h2 className="text-4xl md:text-5xl font-bold text-brand-gold mb-6">
+            Services
           </h2>
           <p className="text-xl text-brand-white/80 max-w-3xl mx-auto">
             Choose your preferred service below and click "Book Now" to schedule your appointment with our custom booking system.
           </p>
         </div>
-        
+
         {/* Individual Services Section */}
         <div className="mb-20">
           <h3 className="text-4xl font-bold text-brand-white text-center mb-12">
@@ -108,7 +108,7 @@ export default function ServicesSection() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {individualServices.map((service, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-brand-black rounded-lg p-6 hover:transform hover:scale-105 transition-all duration-300 border border-brand-gold/20 hover:border-brand-gold/50"
                 data-testid={`individual-service-${index}`}
@@ -128,7 +128,7 @@ export default function ServicesSection() {
                     <span className="text-xl font-bold text-brand-white">{service.price}</span>
                   </div>
                   <Link href="/booking">
-                    <Button 
+                    <Button
                       className="w-full bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-colors duration-300 font-semibold text-sm py-2"
                       data-testid={`button-book-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
                     >
@@ -148,7 +148,7 @@ export default function ServicesSection() {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-8">
             {monthlyPackages.map((packageItem, index) => (
-              <div 
+              <div
                 key={index}
                 className="bg-brand-black rounded-lg p-8 hover:transform hover:scale-105 transition-all duration-300 border border-brand-gold/20 hover:border-brand-gold/50 relative"
                 data-testid={`monthly-package-${index}`}
@@ -175,7 +175,7 @@ export default function ServicesSection() {
                     {packageItem.description}
                   </div>
                   <Link href="/booking">
-                    <Button 
+                    <Button
                       className="w-full bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-colors duration-300 font-semibold"
                       data-testid={`button-book-package-${packageItem.title.toLowerCase().replace(/\s+/g, '-')}`}
                     >
