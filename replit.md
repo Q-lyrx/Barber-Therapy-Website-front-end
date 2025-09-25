@@ -6,7 +6,7 @@ This is a frontend-only static React application for a premium barbershop called
 
 ## System Architecture
 
-The application is fully configured as a static website with no backend dependencies:
+The application is fully configured as a frontend-only static website with no backend dependencies:
 
 ### Frontend Architecture (Static)
 - **Framework**: React 18 with TypeScript
@@ -17,6 +17,7 @@ The application is fully configured as a static website with no backend dependen
 - **Language**: TypeScript with ES modules
 - **Deployment**: Static files only, optimized for Netlify/Vercel
 - **Development**: Vite dev server with hot module replacement
+- **Project Structure**: All frontend code contained in `/client` directory
 
 ### Design System
 - **Brand Colors**: Black (#000000), Gold (#D4AF37), White (#FFFFFF)
@@ -74,21 +75,23 @@ The application is fully configured as a static website with no backend dependen
 ## Deployment Strategy
 
 ### Frontend-Only Deployment
-This project is now optimized for static hosting platforms:
+This project is optimized for static hosting platforms with all configuration files properly set up:
 
 **Netlify Deployment:**
-- Build Command: `npm run build`
-- Publish Directory: `dist`
+- Build Command: `cd client && npm install && npm run build`
+- Publish Directory: `client/dist`
 - Node Version: 18
 - Auto-deployment from Git repository
 - SPA routing with redirects configured
+- Configuration file: `netlify.toml`
 
 **Vercel Deployment:**
 - Framework: Vite
-- Build Command: `npm run build`
-- Output Directory: `dist`
+- Build Command: `cd client && npm install && npm run build`
+- Output Directory: `client/dist`
 - Auto-deployment from Git repository
 - Optimized caching headers for assets
+- Configuration file: `vercel.json`
 
 ### Development Environment
 - **Local Development**: Vite dev server on port 3000
@@ -104,6 +107,7 @@ This project is now optimized for static hosting platforms:
 
 ## Changelog
 
+- September 25, 2025: Cleaned up project structure for frontend-only static deployment
 - September 24, 2025: Removed all backend code and configured for static hosting
 - September 24, 2025: Implemented comprehensive gallery with WebP image compression
 - September 24, 2025: Added lightbox functionality and carousel navigation
