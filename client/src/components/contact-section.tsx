@@ -12,7 +12,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
         <div className="text-center mb-16">
           <div className="inline-block">
-            <h2 className="text-4xl lg:text-5xl font-bold text-brand-white mb-4 relative">
+            <h2 className="text-4xl lg:text-5xl font-bold text-brand-gold mb-4 relative">
               Contact Us
               <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-brand-gold to-transparent"></div>
             </h2>
