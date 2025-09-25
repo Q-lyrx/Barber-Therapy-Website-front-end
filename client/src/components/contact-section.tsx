@@ -4,7 +4,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-brand-white mb-4">
-            Get In <span className="text-brand-gold">Touch</span>
+            Get In Touch
           </h2>
           <p className="text-brand-white/80 text-lg max-w-2xl mx-auto">
             Ready to experience the finest in men's grooming? Contact us to schedule your appointment or ask any questions.
@@ -23,11 +23,16 @@ export default function ContactSection() {
                     <i className="fas fa-map-marker-alt text-brand-gold text-xl w-6"></i>
                   </div>
                   <div className="ml-4">
-                    <h4 className="text-brand-white font-semibold mb-1">Address</h4>
-                    <p className="text-brand-white/80">
-                      123 Financial Street<br />
-                      Downtown District, City 12345
-                    </p>
+                    <h4 className="text-brand-white font-semibold mb-1">Location</h4>
+                    <a 
+                      href="https://www.google.com/maps/place/Barber+Therapy/@43.6579818,-79.7487362,16z/data=!4m15!1m8!3m7!1s0x882b1544876e2f35:0x4457789336f7a586!2sBarber+Therapy!8m2!3d43.6581367!4d-79.748521!10e5!16s%2Fg%2F11wf_w8h7t!3m5!1s0x882b1544876e2f35:0x4457789336f7a586!8m2!3d43.6581367!4d-79.748521!16s%2Fg%2F11wf_w8h7t?entry=ttu"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-brand-white/80 hover:text-brand-gold transition-colors duration-300"
+                      data-testid="link-address"
+                    >
+                      34 Denlow Drive, Brampton, ON L6Y2L4
+                    </a>
                   </div>
                 </div>
 
@@ -37,7 +42,13 @@ export default function ContactSection() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-brand-white font-semibold mb-1">Phone</h4>
-                    <p className="text-brand-white/80">(555) 123-4567</p>
+                    <a 
+                      href="tel:647-746-7861"
+                      className="text-brand-white/80 hover:text-brand-gold transition-colors duration-300"
+                      data-testid="link-phone"
+                    >
+                      647-746-7861
+                    </a>
                   </div>
                 </div>
 
@@ -47,7 +58,13 @@ export default function ContactSection() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-brand-white font-semibold mb-1">Email</h4>
-                    <p className="text-brand-white/80">info@barbertherapy.com</p>
+                    <a 
+                      href="mailto:thebarbertherapy@gmail.com"
+                      className="text-brand-white/80 hover:text-brand-gold transition-colors duration-300"
+                      data-testid="link-email"
+                    >
+                      thebarbertherapy@gmail.com
+                    </a>
                   </div>
                 </div>
               </div>
