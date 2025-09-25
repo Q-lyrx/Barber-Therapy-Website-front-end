@@ -1,4 +1,4 @@
-import { useState, useRef, memo } from 'react';
+import { useState, useRef, memo, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import LazyImage from '@/components/lazy-image';
@@ -44,6 +44,24 @@ const GalleryCarousel = memo(function GalleryCarousel({ images, onImageClick }: 
     const newIndex = Math.round(scrollLeft / imageWidth);
     setCurrentIndex(Math.min(newIndex, images.length - 1));
   };
+
+  // Prefetch neighbor images for instant navigation
+  useEffect(() => {
+    const prefetchNeighbors = () => {
+      const nextIndex = (currentIndex + 1) % images.length;
+      const prevIndex = (currentIndex - 1 + images.length) % images.length;
+      
+      // Prefetch next and previous images
+      [nextIndex, prevIndex].forEach(index => {
+        const img = new Image();
+        img.src = images[index];
+      });
+    };
+
+    // Small delay to not interfere with current image loading
+    const timeoutId = setTimeout(prefetchNeighbors, 100);
+    return () => clearTimeout(timeoutId);
+  }, [currentIndex, images]);
 
   return (
     <div className="relative">

@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import ImageLightbox from '@/components/image-lightbox';
 import GalleryCarousel from '@/components/gallery-carousel';
 import LazyImage from '@/components/lazy-image';
@@ -21,6 +21,25 @@ export default function GallerySection() {
     setLightboxIndex(index);
     setLightboxOpen(true);
   };
+
+  // Preload critical featured images for instant display
+  useEffect(() => {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(() => {
+        featuredImages.forEach(src => {
+          const img = new Image();
+          img.src = src;
+        });
+      });
+    } else {
+      setTimeout(() => {
+        featuredImages.forEach(src => {
+          const img = new Image();
+          img.src = src;
+        });
+      }, 1000);
+    }
+  }, [featuredImages]);
 
   return (
     <section id="gallery" className="py-24 bg-brand-black">
