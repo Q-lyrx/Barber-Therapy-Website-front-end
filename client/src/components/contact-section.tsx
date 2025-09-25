@@ -11,7 +11,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="max-w-4xl mx-auto">
           {/* Contact Information */}
           <div className="space-y-8">
             <div className="bg-brand-black/50 p-8 rounded-lg border border-brand-gold/20">
@@ -92,86 +92,6 @@ export default function ContactSection() {
                 </p>
               </div>
             </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-brand-black/50 p-8 rounded-lg border border-brand-gold/20">
-            <h3 className="text-2xl font-bold text-brand-white mb-6">Send Us a Message</h3>
-            <form className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label htmlFor="firstName" className="block text-brand-white font-medium mb-2">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    data-testid="input-first-name"
-                    className="w-full px-4 py-3 bg-brand-black border border-brand-gold/30 rounded-lg text-brand-white placeholder-brand-white/50 focus:outline-none focus:border-brand-gold transition-colors"
-                    placeholder="Your first name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-brand-white font-medium mb-2">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    data-testid="input-last-name"
-                    className="w-full px-4 py-3 bg-brand-black border border-brand-gold/30 rounded-lg text-brand-white placeholder-brand-white/50 focus:outline-none focus:border-brand-gold transition-colors"
-                    placeholder="Your last name"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-brand-white font-medium mb-2">
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  data-testid="input-email"
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gold/30 rounded-lg text-brand-white placeholder-brand-white/50 focus:outline-none focus:border-brand-gold transition-colors"
-                  placeholder="your.email@example.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-brand-white font-medium mb-2">
-                  Phone (Optional)
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  data-testid="input-phone"
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gold/30 rounded-lg text-brand-white placeholder-brand-white/50 focus:outline-none focus:border-brand-gold transition-colors"
-                  placeholder="(555) 123-4567"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-brand-white font-medium mb-2">
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  rows={4}
-                  data-testid="textarea-message"
-                  className="w-full px-4 py-3 bg-brand-black border border-brand-gold/30 rounded-lg text-brand-white placeholder-brand-white/50 focus:outline-none focus:border-brand-gold transition-colors resize-none"
-                  placeholder="Tell us what you're looking for or ask any questions..."
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                data-testid="button-send-message"
-                className="w-full bg-brand-gold text-brand-black font-semibold py-3 px-6 rounded-lg hover:bg-brand-dark-gold transition-colors duration-300"
-              >
-                Send Message
-              </button>
-            </form>
           </div>
         </div>
 
