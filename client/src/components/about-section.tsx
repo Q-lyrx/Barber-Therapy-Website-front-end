@@ -21,6 +21,21 @@ export default function AboutSection() {
               </p>
             </div>
             
+            <div className="mt-8 grid grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-brand-gold">10+</div>
+                <div className="text-sm text-brand-white/70 uppercase tracking-wide">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-brand-gold">2000+</div>
+                <div className="text-sm text-brand-white/70 uppercase tracking-wide">Happy Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-brand-gold">★★★★★</div>
+                <div className="text-sm text-brand-white/70 uppercase tracking-wide">Google Reviews</div>
+              </div>
+            </div>
+            
             <div className="mt-8">
               <a 
                 href="#services"
@@ -30,6 +45,9 @@ export default function AboutSection() {
                 <i className="fas fa-calendar-alt mr-2"></i>
                 Book an Appointment
               </a>
+              <p className="text-brand-white/60 text-sm mt-3">
+                Join thousands of satisfied clients who trust Barber Therapy for their grooming needs
+              </p>
             </div>
           </div>
           
