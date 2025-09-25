@@ -1,33 +1,21 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import ImageLightbox from '@/components/image-lightbox';
 import GalleryCarousel from '@/components/gallery-carousel';
-
-// Import all gallery images
-import gallery1 from '@/assets/gallery/gallery-1.webp';
-import gallery2 from '@/assets/gallery/gallery-2.webp';
-import gallery3 from '@/assets/gallery/gallery-3.webp';
-import gallery4 from '@/assets/gallery/gallery-4.webp';
-import gallery5 from '@/assets/gallery/gallery-5.webp';
-import gallery6 from '@/assets/gallery/gallery-6.webp';
-import gallery7 from '@/assets/gallery/gallery-7.webp';
-import gallery8 from '@/assets/gallery/gallery-8.webp';
-import gallery9 from '@/assets/gallery/gallery-9.webp';
-import gallery10 from '@/assets/gallery/gallery-10.webp';
-import gallery11 from '@/assets/gallery/gallery-11.webp';
-import gallery12 from '@/assets/gallery/gallery-12.webp';
-import gallery13 from '@/assets/gallery/gallery-13.webp';
-
-const allImages = [
-  gallery1, gallery2, gallery3, gallery4, gallery5, gallery6, gallery7, 
-  gallery8, gallery9, gallery10, gallery11, gallery12, gallery13
-];
-
-const featuredImages = allImages.slice(0, 4);
-const carouselImages = allImages.slice(4);
+import LazyImage from '@/components/lazy-image';
 
 export default function GallerySection() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  // Dynamic image loading for better performance - only load when needed
+  const allImages = useMemo(() => {
+    return Array.from({ length: 13 }, (_, index) => 
+      `/src/assets/gallery/gallery-${index + 1}.webp`
+    );
+  }, []);
+
+  const featuredImages = useMemo(() => allImages.slice(0, 4), [allImages]);
+  const carouselImages = useMemo(() => allImages.slice(4), [allImages]);
 
   const openLightbox = (index: number) => {
     setLightboxIndex(index);
@@ -52,14 +40,13 @@ export default function GallerySection() {
             <div 
               key={index}
               className="group cursor-pointer overflow-hidden rounded-lg h-64"
-              onClick={() => openLightbox(index)}
               data-testid={`featured-image-${index}`}
             >
-              <img 
+              <LazyImage
                 src={image}
                 alt={`Featured barbershop work ${index + 1}`}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                loading="lazy"
+                className="group-hover:scale-110 transition-transform duration-500"
+                onClick={() => openLightbox(index)}
               />
             </div>
           ))}

@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import LazyImage from '@/components/lazy-image';
 
 interface GalleryCarouselProps {
   images: string[];
@@ -82,14 +83,13 @@ export default function GalleryCarousel({ images, onImageClick }: GalleryCarouse
           <div
             key={index}
             className="flex-shrink-0 w-80 h-80 cursor-pointer group overflow-hidden rounded-lg"
-            onClick={() => onImageClick(index + 4)} // +4 because carousel starts after first 4 images
             data-testid={`carousel-image-${index}`}
           >
-            <img
+            <LazyImage
               src={image}
               alt={`Barbershop work ${index + 5}`}
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              loading="lazy"
+              className="group-hover:scale-110 transition-transform duration-500"
+              onClick={() => onImageClick(index + 4)} // +4 because carousel starts after first 4 images
             />
           </div>
         ))}
