@@ -55,10 +55,10 @@ export default function ServicesSection() {
             Our Services
           </span>
           <h2 className="text-4xl md:text-5xl font-bold text-brand-white mt-4 mb-6">
-            Premium Grooming Services
+            Choose your preferred service below and click "Book Now" to schedule your appointment with our custom booking system.
           </h2>
           <p className="text-xl text-brand-white/80 max-w-3xl mx-auto">
-            Each service is crafted with precision and care, using only the finest products and techniques
+            Individual Services
           </p>
         </div>
         
