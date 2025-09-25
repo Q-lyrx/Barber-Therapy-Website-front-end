@@ -28,7 +28,7 @@ export default function ContactSection() {
                       href="https://www.google.com/maps/place/Barber+Therapy/@43.6579818,-79.7487362,16z/data=!4m15!1m8!3m7!1s0x882b1544876e2f35:0x4457789336f7a586!2sBarber+Therapy!8m2!3d43.6581367!4d-79.748521!10e5!16s%2Fg%2F11wf_w8h7t!3m5!1s0x882b1544876e2f35:0x4457789336f7a586!8m2!3d43.6581367!4d-79.748521!16s%2Fg%2F11wf_w8h7t?entry=ttu"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-brand-white/80 hover:text-brand-gold transition-colors duration-300"
+                      className="text-brand-white/80 hover:text-brand-gold transition-all duration-300 cursor-pointer underline-offset-4 hover:underline"
                       data-testid="link-address"
                     >
                       34 Denlow Drive, Brampton, ON L6Y2L4
@@ -44,7 +44,7 @@ export default function ContactSection() {
                     <h4 className="text-brand-white font-semibold mb-1">Phone</h4>
                     <a 
                       href="tel:647-746-7861"
-                      className="text-brand-white/80 hover:text-brand-gold transition-colors duration-300"
+                      className="text-brand-white/80 hover:text-brand-gold transition-all duration-300 cursor-pointer underline-offset-4 hover:underline"
                       data-testid="link-phone"
                     >
                       647-746-7861
@@ -60,7 +60,7 @@ export default function ContactSection() {
                     <h4 className="text-brand-white font-semibold mb-1">Email</h4>
                     <a 
                       href="mailto:thebarbertherapy@gmail.com"
-                      className="text-brand-white/80 hover:text-brand-gold transition-colors duration-300"
+                      className="text-brand-white/80 hover:text-brand-gold transition-all duration-300 cursor-pointer underline-offset-4 hover:underline"
                       data-testid="link-email"
                     >
                       thebarbertherapy@gmail.com
