@@ -23,16 +23,16 @@ export default function AboutSection() {
             
             <div className="mt-8 grid grid-cols-3 gap-6">
               <div className="text-center">
-                <div className="text-3xl font-bold text-brand-gold">10+</div>
-                <div className="text-sm text-brand-white/70 uppercase tracking-wide">Years Experience</div>
+                <div className="text-3xl font-bold text-brand-gold">24/7</div>
+                <div className="text-sm text-brand-white/70 uppercase tracking-wide">Service Available</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-brand-gold">2000+</div>
+                <div className="text-3xl font-bold text-brand-gold">150+</div>
                 <div className="text-sm text-brand-white/70 uppercase tracking-wide">Happy Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-brand-gold">★★★★★</div>
-                <div className="text-sm text-brand-white/70 uppercase tracking-wide">Google Reviews</div>
+                <div className="text-3xl font-bold text-brand-gold">70+</div>
+                <div className="text-sm text-brand-white/70 uppercase tracking-wide">5 Star Reviews</div>
               </div>
             </div>
             
