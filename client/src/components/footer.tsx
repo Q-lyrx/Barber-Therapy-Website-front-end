@@ -9,6 +9,26 @@ export default function Footer() {
             <p className="text-brand-white/80 mb-6 leading-relaxed">
               Wow… you made it to the end. Either you really like what you see, or you're procrastinating on something important. Either way, we're flattered.
             </p>
+            <div className="flex space-x-4">
+              <a 
+                href="https://www.instagram.com/thebarbertherapy?igsh=bW81eWdwdGx0YW9t" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-white hover:text-brand-gold transition-colors duration-300"
+                data-testid="link-instagram"
+              >
+                <i className="fab fa-instagram text-xl"></i>
+              </a>
+              <a 
+                href="https://www.tiktok.com/@thebarbertherapy?_t=ZM-8wXtnDhmjCQ&_r=1" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand-white hover:text-brand-gold transition-colors duration-300"
+                data-testid="link-tiktok"
+              >
+                <i className="fab fa-tiktok text-xl"></i>
+              </a>
+            </div>
           </div>
           
           {/* Quick Links Section */}

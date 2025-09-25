@@ -23,6 +23,30 @@ export default function ContactSection() {
           <div className="flex justify-center mt-6">
             <div className="w-20 h-0.5 bg-brand-gold"></div>
           </div>
+          <div className="flex justify-center space-x-6 mt-6">
+            <a 
+              href="https://www.instagram.com/thebarbertherapy?igsh=bW81eWdwdGx0YW9t" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-white hover:text-brand-gold transition-colors duration-300 group"
+              data-testid="link-instagram-contact"
+            >
+              <div className="w-12 h-12 bg-brand-gold/20 rounded-full flex items-center justify-center group-hover:bg-brand-gold/30 transition-all duration-300">
+                <i className="fab fa-instagram text-xl"></i>
+              </div>
+            </a>
+            <a 
+              href="https://www.tiktok.com/@thebarbertherapy?_t=ZM-8wXtnDhmjCQ&_r=1" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-brand-white hover:text-brand-gold transition-colors duration-300 group"
+              data-testid="link-tiktok-contact"
+            >
+              <div className="w-12 h-12 bg-brand-gold/20 rounded-full flex items-center justify-center group-hover:bg-brand-gold/30 transition-all duration-300">
+                <i className="fab fa-tiktok text-xl"></i>
+              </div>
+            </a>
+          </div>
         </div>
 
         <div className="max-w-6xl mx-auto">
