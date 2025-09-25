@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, memo } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import LazyImage from '@/components/lazy-image';
@@ -8,7 +8,7 @@ interface GalleryCarouselProps {
   onImageClick: (index: number) => void;
 }
 
-export default function GalleryCarousel({ images, onImageClick }: GalleryCarouselProps) {
+const GalleryCarousel = memo(function GalleryCarousel({ images, onImageClick }: GalleryCarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
 
@@ -110,4 +110,6 @@ export default function GalleryCarousel({ images, onImageClick }: GalleryCarouse
       </div>
     </div>
   );
-}
+});
+
+export default GalleryCarousel;

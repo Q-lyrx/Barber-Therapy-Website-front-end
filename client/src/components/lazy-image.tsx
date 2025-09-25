@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { useLazyImage } from '@/hooks/use-lazy-image';
 
 interface LazyImageProps {
@@ -8,7 +9,7 @@ interface LazyImageProps {
   placeholder?: string;
 }
 
-export default function LazyImage({ src, alt, className = '', onClick, placeholder }: LazyImageProps) {
+const LazyImage = memo(function LazyImage({ src, alt, className = '', onClick, placeholder }: LazyImageProps) {
   const { imgRef, imageSrc, isLoaded } = useLazyImage({ src, placeholder });
 
   return (
@@ -30,4 +31,6 @@ export default function LazyImage({ src, alt, className = '', onClick, placehold
       )}
     </div>
   );
-}
+});
+
+export default LazyImage;
