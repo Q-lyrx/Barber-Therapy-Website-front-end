@@ -9,9 +9,10 @@ export default function HeroSection() {
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat brightness-75 contrast-110" 
+        className="absolute inset-0 bg-cover bg-no-repeat brightness-75 contrast-110" 
         style={{
-          backgroundImage: `url(${barbershopHeroImage})`
+          backgroundImage: `url(${barbershopHeroImage})`,
+          backgroundPosition: 'center 40%'
         }}
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" />
