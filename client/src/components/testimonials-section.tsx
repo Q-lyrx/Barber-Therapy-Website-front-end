@@ -24,19 +24,9 @@ export default function TestimonialsSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-brand-white mb-6">
             Client Testimonials
           </h2>
-          <p className="text-xl text-brand-white/80 max-w-3xl mx-auto mb-8">
+          <p className="text-xl text-brand-white/80 max-w-3xl mx-auto">
             See what our clients have to say about their experience at Barber Therapy.
           </p>
-          <a 
-            href="https://g.page/r/CYal9zaTeFdEEBE/review" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center bg-brand-gold text-brand-black px-6 py-3 rounded-lg font-semibold hover:bg-brand-dark-gold transition-colors duration-300"
-            data-testid="link-write-review"
-          >
-            <i className="fas fa-star mr-2"></i>
-            Write a Review
-          </a>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -64,6 +54,19 @@ export default function TestimonialsSection() {
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <a 
+            href="https://g.page/r/CYal9zaTeFdEEBE/review" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-brand-gold text-brand-black px-6 py-3 rounded-lg font-semibold hover:bg-brand-dark-gold transition-colors duration-300"
+            data-testid="link-write-review"
+          >
+            <i className="fas fa-star mr-2"></i>
+            Write a Review
+          </a>
         </div>
       </div>
     </section>
