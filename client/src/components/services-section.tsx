@@ -51,9 +51,9 @@ export default function ServicesSection() {
     <section id="services" className="py-24 bg-brand-dark">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-brand-gold font-semibold text-sm uppercase tracking-wider">
+          <h2 className="text-brand-gold font-semibold text-sm uppercase tracking-wider">
             Individual Grooming Services
-          </span>
+          </h2>
           <p className="text-xl text-brand-white/80 max-w-3xl mx-auto mt-4 mb-4">
             Choose your preferred service below and click "Book Now" to schedule your appointment with our custom booking system.
           </p>
