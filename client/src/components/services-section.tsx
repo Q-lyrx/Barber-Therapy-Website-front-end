@@ -52,14 +52,11 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-brand-gold font-semibold text-sm uppercase tracking-wider">
-            Services
+            Individual Grooming Services
           </span>
           <p className="text-xl text-brand-white/80 max-w-3xl mx-auto mt-4 mb-4">
             Choose your preferred service below and click "Book Now" to schedule your appointment with our custom booking system.
           </p>
-          <h2 className="text-4xl md:text-6xl font-bold text-brand-gold">
-            Individual Grooming Services
-          </h2>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
