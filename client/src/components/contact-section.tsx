@@ -157,6 +157,23 @@ export default function ContactSection() {
             </form>
           </div>
         </div>
+
+        {/* Map Section */}
+        <div className="mt-16">
+          <div className="bg-brand-black/50 p-8 rounded-lg border border-brand-gold/20">
+            <h3 className="text-2xl font-bold text-brand-white mb-6 text-center">Find Us</h3>
+            <div className="h-96 rounded-lg overflow-hidden">
+              <iframe 
+                src="https://storage.googleapis.com/maps-solutions-fzlrpwv5yq/locator-plus/opik/locator-plus.html"
+                width="100%" 
+                height="100%"
+                style={{border: 0}}
+                loading="lazy"
+                data-testid="map-iframe"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
