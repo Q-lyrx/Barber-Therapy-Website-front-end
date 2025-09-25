@@ -1,7 +1,6 @@
-import { useState, useMemo, useEffect } from 'react';
+import { useState, useMemo } from 'react';
 import ImageLightbox from '@/components/image-lightbox';
 import GalleryCarousel from '@/components/gallery-carousel';
-import LazyImage from '@/components/lazy-image';
 
 export default function GallerySection() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -22,24 +21,6 @@ export default function GallerySection() {
     setLightboxOpen(true);
   };
 
-  // Preload critical featured images for instant display
-  useEffect(() => {
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(() => {
-        featuredImages.forEach(src => {
-          const img = new Image();
-          img.src = src;
-        });
-      });
-    } else {
-      setTimeout(() => {
-        featuredImages.forEach(src => {
-          const img = new Image();
-          img.src = src;
-        });
-      }, 1000);
-    }
-  }, [featuredImages]);
 
   return (
     <section id="gallery" className="py-24 bg-brand-black">
@@ -61,10 +42,10 @@ export default function GallerySection() {
               className="group cursor-pointer overflow-hidden rounded-lg h-64"
               data-testid={`featured-image-${index}`}
             >
-              <LazyImage
+              <img
                 src={image}
                 alt={`Featured barbershop work ${index + 1}`}
-                className="group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer"
                 onClick={() => openLightbox(index)}
               />
             </div>

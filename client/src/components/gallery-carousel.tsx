@@ -1,7 +1,6 @@
-import { useState, useRef, memo, useEffect } from 'react';
+import { useState, useRef, memo } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import LazyImage from '@/components/lazy-image';
 
 interface GalleryCarouselProps {
   images: string[];
@@ -45,23 +44,6 @@ const GalleryCarousel = memo(function GalleryCarousel({ images, onImageClick }: 
     setCurrentIndex(Math.min(newIndex, images.length - 1));
   };
 
-  // Prefetch neighbor images for instant navigation
-  useEffect(() => {
-    const prefetchNeighbors = () => {
-      const nextIndex = (currentIndex + 1) % images.length;
-      const prevIndex = (currentIndex - 1 + images.length) % images.length;
-      
-      // Prefetch next and previous images
-      [nextIndex, prevIndex].forEach(index => {
-        const img = new Image();
-        img.src = images[index];
-      });
-    };
-
-    // Small delay to not interfere with current image loading
-    const timeoutId = setTimeout(prefetchNeighbors, 100);
-    return () => clearTimeout(timeoutId);
-  }, [currentIndex, images]);
 
   return (
     <div className="relative">
@@ -103,10 +85,10 @@ const GalleryCarousel = memo(function GalleryCarousel({ images, onImageClick }: 
             className="flex-shrink-0 w-80 h-80 cursor-pointer group overflow-hidden rounded-lg"
             data-testid={`carousel-image-${index}`}
           >
-            <LazyImage
+            <img
               src={image}
               alt={`Barbershop work ${index + 5}`}
-              className="group-hover:scale-110 transition-transform duration-500"
+              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer"
               onClick={() => onImageClick(index + 4)} // +4 because carousel starts after first 4 images
             />
           </div>
