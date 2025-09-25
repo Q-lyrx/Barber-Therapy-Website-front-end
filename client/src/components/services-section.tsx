@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
 
+// Prefetch booking page chunk for instant navigation
+const preloadBooking = () => import('@/pages/booking');
+
 const individualServices = [
   {
     icon: "fas fa-cut",
@@ -131,6 +134,9 @@ export default function ServicesSection() {
                     <Button
                       className="w-full bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-colors duration-300 font-semibold text-sm py-2"
                       data-testid={`button-book-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      onMouseEnter={preloadBooking}
+                      onFocus={preloadBooking}
+                      onTouchStart={preloadBooking}
                     >
                       Book Now
                     </Button>
@@ -178,6 +184,9 @@ export default function ServicesSection() {
                     <Button
                       className="w-full bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-colors duration-300 font-semibold"
                       data-testid={`button-book-package-${packageItem.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      onMouseEnter={preloadBooking}
+                      onFocus={preloadBooking}
+                      onTouchStart={preloadBooking}
                     >
                       Book Package
                     </Button>
