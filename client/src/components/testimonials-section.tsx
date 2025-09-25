@@ -36,9 +36,9 @@ export default function TestimonialsSection() {
               className="bg-brand-black rounded-lg p-8 border border-brand-gold/20"
               data-testid={`testimonial-${index}`}
             >
-              <div className="flex justify-center mb-4">
+              <div className="flex justify-center mb-4 gap-1">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <i key={i} className="fas fa-star text-brand-gold text-lg"></i>
+                  <i key={i} className="fas fa-star text-brand-gold text-xl"></i>
                 ))}
               </div>
               <p className="text-brand-white/90 mb-6 text-base italic leading-relaxed">
