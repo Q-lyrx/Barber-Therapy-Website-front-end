@@ -31,8 +31,13 @@ export default function AboutSection() {
                 <div className="text-sm text-brand-white/70 uppercase tracking-wide">Happy Clients</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-brand-gold">70+</div>
-                <div className="text-sm text-brand-white/70 uppercase tracking-wide">5 Star Reviews</div>
+                <div className="text-3xl font-bold text-brand-gold mb-2">70+</div>
+                <div className="flex justify-center mb-1">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <i key={i} className="fas fa-star text-brand-gold text-sm"></i>
+                  ))}
+                </div>
+                <div className="text-sm text-brand-white/70 uppercase tracking-wide">Reviews</div>
               </div>
             </div>
             
