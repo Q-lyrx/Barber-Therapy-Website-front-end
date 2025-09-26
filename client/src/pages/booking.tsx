@@ -67,15 +67,20 @@ export default function Booking() {
       {/* Main Content */}
       <main className="pt-8 pb-16">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-brand-gold font-semibold text-sm uppercase tracking-wider">
-              Ready to Book?
-            </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-brand-white mt-4 mb-6">
-              Schedule Your Appointment
+          <div className="text-center mb-8">
+            <h1 className="text-3xl md:text-4xl font-bold text-brand-gold mb-4">
+              Line-Up Service
             </h1>
-            <p className="text-xl text-brand-white/80 mb-8 max-w-2xl mx-auto">
-              Experience the finest in men's grooming. Book your appointment today and discover the Barber Therapy difference.
+            <div className="flex justify-center items-center gap-6 mb-4">
+              <span className="text-brand-white text-lg font-semibold">
+                <i className="fas fa-clock text-brand-gold mr-2"></i>15 minutes
+              </span>
+              <span className="text-brand-white text-lg font-semibold">
+                <i className="fas fa-dollar-sign text-brand-gold mr-2"></i>$15
+              </span>
+            </div>
+            <p className="text-lg text-brand-white/90 mb-6 max-w-xl mx-auto">
+              Get that fresh, clean lineup that defines your style. Quick, precise, and guaranteed to have you looking sharp.
             </p>
           </div>
 
@@ -103,31 +108,11 @@ export default function Booking() {
           </div>
 
           {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div>
-              <i className="fas fa-clock text-brand-gold text-2xl mb-4"></i>
-              <h4 className="text-lg font-semibold text-brand-white mb-2">Flexible Hours</h4>
-              <p className="text-brand-white/70">
-                Tuesday - Saturday<br />
-                9 AM - 7 PM
-              </p>
-            </div>
-            <div>
-              <i className="fas fa-map-marker-alt text-brand-gold text-2xl mb-4"></i>
-              <h4 className="text-lg font-semibold text-brand-white mb-2">Prime Location</h4>
-              <p className="text-brand-white/70">
-                Downtown Financial District<br />
-                Easy Parking Available
-              </p>
-            </div>
-            <div>
-              <i className="fas fa-phone text-brand-gold text-2xl mb-4"></i>
-              <h4 className="text-lg font-semibold text-brand-white mb-2">Quick Contact</h4>
-              <p className="text-brand-white/70">
-                Call for same-day appointments<br />
-                (555) 123-4567
-              </p>
-            </div>
+          <div className="text-center bg-brand-black/50 rounded-lg p-6">
+            <h4 className="text-lg font-semibold text-brand-gold mb-3">Questions? Call us at (555) 123-4567</h4>
+            <p className="text-brand-white/70">
+              Available Tuesday - Saturday, 9 AM - 7 PM
+            </p>
           </div>
         </div>
       </main>
