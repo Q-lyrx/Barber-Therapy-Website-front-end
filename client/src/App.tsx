@@ -10,6 +10,9 @@ const Booking = lazy(() => import("@/pages/booking"));
 const BeardBooking = lazy(() => import("@/pages/beard-booking"));
 const BeardHotTowelBooking = lazy(() => import("@/pages/beard-hot-towel-booking"));
 const HaircutBooking = lazy(() => import("@/pages/haircut-booking"));
+const HaircutBeardBooking = lazy(() => import("@/pages/haircut-beard-booking"));
+const HaircutBeardHotTowelBooking = lazy(() => import("@/pages/haircut-beard-hot-towel-booking"));
+const FullServiceBooking = lazy(() => import("@/pages/full-service-booking"));
 
 // Prefetch booking page chunks for instant navigation
 const preloadBooking = () => import('@/pages/booking');
@@ -48,6 +51,21 @@ function Router() {
       <Route path="/haircut-booking">
         <Suspense fallback={<LoadingSpinner />}>
           <HaircutBooking />
+        </Suspense>
+      </Route>
+      <Route path="/haircut-beard-booking">
+        <Suspense fallback={<LoadingSpinner />}>
+          <HaircutBeardBooking />
+        </Suspense>
+      </Route>
+      <Route path="/haircut-beard-hot-towel-booking">
+        <Suspense fallback={<LoadingSpinner />}>
+          <HaircutBeardHotTowelBooking />
+        </Suspense>
+      </Route>
+      <Route path="/full-service-booking">
+        <Suspense fallback={<LoadingSpinner />}>
+          <FullServiceBooking />
         </Suspense>
       </Route>
       <Route component={NotFound} />

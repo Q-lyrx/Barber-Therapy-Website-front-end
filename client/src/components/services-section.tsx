@@ -6,6 +6,9 @@ const preloadBooking = () => import('@/pages/booking');
 const preloadBeardBooking = () => import('@/pages/beard-booking');
 const preloadBeardHotTowelBooking = () => import('@/pages/beard-hot-towel-booking');
 const preloadHaircutBooking = () => import('@/pages/haircut-booking');
+const preloadHaircutBeardBooking = () => import('@/pages/haircut-beard-booking');
+const preloadHaircutBeardHotTowelBooking = () => import('@/pages/haircut-beard-hot-towel-booking');
+const preloadFullServiceBooking = () => import('@/pages/full-service-booking');
 
 const individualServices = [
   {
@@ -137,6 +140,9 @@ export default function ServicesSection() {
                     service.title === "Beard" ? "/beard-booking" :
                     service.title === "Beard + Hot Towel" ? "/beard-hot-towel-booking" :
                     service.title === "Haircut" ? "/haircut-booking" :
+                    service.title === "Haircut + Beard" ? "/haircut-beard-booking" :
+                    service.title === "Haircut + Beard and Hot Towel" ? "/haircut-beard-hot-towel-booking" :
+                    service.title === "Full-Service" ? "/full-service-booking" :
                     "/booking"
                   }>
                     <Button
@@ -146,18 +152,27 @@ export default function ServicesSection() {
                         service.title === "Beard" ? preloadBeardBooking :
                         service.title === "Beard + Hot Towel" ? preloadBeardHotTowelBooking :
                         service.title === "Haircut" ? preloadHaircutBooking :
+                        service.title === "Haircut + Beard" ? preloadHaircutBeardBooking :
+                        service.title === "Haircut + Beard and Hot Towel" ? preloadHaircutBeardHotTowelBooking :
+                        service.title === "Full-Service" ? preloadFullServiceBooking :
                         preloadBooking
                       }
                       onFocus={
                         service.title === "Beard" ? preloadBeardBooking :
                         service.title === "Beard + Hot Towel" ? preloadBeardHotTowelBooking :
                         service.title === "Haircut" ? preloadHaircutBooking :
+                        service.title === "Haircut + Beard" ? preloadHaircutBeardBooking :
+                        service.title === "Haircut + Beard and Hot Towel" ? preloadHaircutBeardHotTowelBooking :
+                        service.title === "Full-Service" ? preloadFullServiceBooking :
                         preloadBooking
                       }
                       onTouchStart={
                         service.title === "Beard" ? preloadBeardBooking :
                         service.title === "Beard + Hot Towel" ? preloadBeardHotTowelBooking :
                         service.title === "Haircut" ? preloadHaircutBooking :
+                        service.title === "Haircut + Beard" ? preloadHaircutBeardBooking :
+                        service.title === "Haircut + Beard and Hot Towel" ? preloadHaircutBeardHotTowelBooking :
+                        service.title === "Full-Service" ? preloadFullServiceBooking :
                         preloadBooking
                       }
                     >
