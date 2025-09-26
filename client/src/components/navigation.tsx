@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "wouter";
+import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import logoImage from "../assets/barber-therapy-logo.png";
-
-// Prefetch booking page chunk for instant navigation
-const preloadBooking = () => import('@/pages/booking');
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -92,16 +89,17 @@ export default function Navigation() {
                   {item.label}
                 </button>
               ))}
-              <Link href="/booking">
-                <Button 
-                  className="bg-brand-gold text-brand-black hover:bg-brand-dark-gold font-semibold"
-                  onMouseEnter={preloadBooking}
-                  onFocus={preloadBooking}
-                  onTouchStart={preloadBooking}
-                >
-                  Book Now
-                </Button>
-              </Link>
+              <Button 
+                className="bg-brand-gold text-brand-black hover:bg-brand-dark-gold font-semibold"
+                onClick={() => {
+                  const servicesSection = document.querySelector('#services');
+                  if (servicesSection) {
+                    servicesSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
+                Book Now
+              </Button>
             </div>
           </div>
           
@@ -131,17 +129,18 @@ export default function Navigation() {
                 {item.label}
               </button>
             ))}
-            <Link href="/booking">
-              <Button 
-                className="w-full mt-4 mx-3 bg-brand-gold text-brand-black hover:bg-brand-dark-gold font-semibold"
-                onClick={() => setIsMenuOpen(false)}
-                onMouseEnter={preloadBooking}
-                onFocus={preloadBooking}
-                onTouchStart={preloadBooking}
-              >
-                Book Now
-              </Button>
-            </Link>
+            <Button 
+              className="w-full mt-4 mx-3 bg-brand-gold text-brand-black hover:bg-brand-dark-gold font-semibold"
+              onClick={() => {
+                setIsMenuOpen(false);
+                const servicesSection = document.querySelector('#services');
+                if (servicesSection) {
+                  servicesSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+            >
+              Book Now
+            </Button>
           </div>
         </div>
       )}
