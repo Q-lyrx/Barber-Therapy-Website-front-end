@@ -1,8 +1,22 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
+import { useEffect } from "react";
 
 export default function Booking() {
+  useEffect(() => {
+    // Load Calendly script dynamically
+    const script = document.createElement('script');
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Cleanup script on unmount
+      document.head.removeChild(script);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-brand-dark">
       {/* Header */}
@@ -104,12 +118,6 @@ export default function Booking() {
         </div>
       </main>
 
-      {/* Add Calendly widget script */}
-      <script 
-        type="text/javascript" 
-        src="https://assets.calendly.com/assets/external/widget.js" 
-        async
-      />
     </div>
   );
 }
