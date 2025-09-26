@@ -80,7 +80,7 @@ export default function Booking() {
               </span>
             </div>
             <p className="text-lg text-brand-white/90 mb-6 max-w-xl mx-auto">
-              Get that fresh, clean lineup that defines your style. Quick, precise, and guaranteed to have you looking sharp.
+              Book your appointment now and get that perfect lineup.
             </p>
           </div>
 
