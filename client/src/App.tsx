@@ -5,10 +5,11 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
 
-// Lazy load the booking page for code splitting
+// Lazy load the booking pages for code splitting
 const Booking = lazy(() => import("@/pages/booking"));
+const BeardBooking = lazy(() => import("@/pages/beard-booking"));
 
-// Prefetch booking page chunk for instant navigation
+// Prefetch booking page chunks for instant navigation
 const preloadBooking = () => import('@/pages/booking');
 
 // Loading component for Suspense fallback
@@ -30,6 +31,11 @@ function Router() {
       <Route path="/booking">
         <Suspense fallback={<LoadingSpinner />}>
           <Booking />
+        </Suspense>
+      </Route>
+      <Route path="/beard-booking">
+        <Suspense fallback={<LoadingSpinner />}>
+          <BeardBooking />
         </Suspense>
       </Route>
       <Route component={NotFound} />
