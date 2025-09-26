@@ -109,9 +109,12 @@ export default function Booking() {
 
           {/* Contact Information */}
           <div className="text-center bg-brand-black/50 rounded-lg p-6">
-            <h4 className="text-lg font-semibold text-brand-gold mb-3">Questions? Call us at (555) 123-4567</h4>
+            <h4 className="text-lg font-semibold text-brand-gold mb-3">Questions? Call us at 647-746-7861</h4>
+            <p className="text-brand-white/70 mb-2">
+              Standard Services: Available 24/7
+            </p>
             <p className="text-brand-white/70">
-              Available Tuesday - Saturday, 9 AM - 7 PM
+              Premium After-Hours: Starting 8:00 PM
             </p>
           </div>
         </div>
