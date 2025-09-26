@@ -60,7 +60,7 @@ export default function BeardBooking() {
           <div className="bg-brand-black rounded-lg p-4 mb-8">
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/mujahidlila313/beard?hide_gdpr_banner=1&text_color=ffd700&primary_color=ffd700"
+              data-url="https://calendly.com/mujahidlila313/beard?hide_gdpr_banner=1&background_color=000000&text_color=ffd700&primary_color=ffd700"
               style={{
                 minWidth: '320px',
                 height: '700px'
