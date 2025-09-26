@@ -45,10 +45,10 @@ export default function Booking() {
               {/* Calendly Embed */}
               <div 
                 className="calendly-inline-widget" 
-                data-url="https://calendly.com/barbertherapy" 
+                data-url="https://calendly.com/mujahidlila313/line-up?background_color=1a1a1a&text_color=ffd700&primary_color=ffd700" 
                 style={{
                   minWidth: "320px",
-                  height: "630px",
+                  height: "700px",
                   width: "100%"
                 }}
               >
@@ -61,12 +61,12 @@ export default function Booking() {
                       Please visit our Calendly page to schedule your appointment
                     </p>
                     <a 
-                      href="https://calendly.com/barbertherapy" 
+                      href="https://calendly.com/mujahidlila313/line-up" 
                       target="_blank" 
                       rel="noopener noreferrer"
                       className="inline-block bg-brand-gold text-brand-black px-6 py-3 rounded-md font-semibold hover:bg-brand-dark-gold transition-colors duration-300"
                     >
-                      Open Calendly
+                      Book Line-Up Service
                     </a>
                   </div>
                 </div>
