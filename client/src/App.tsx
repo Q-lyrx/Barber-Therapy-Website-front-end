@@ -9,6 +9,7 @@ import NotFound from "@/pages/not-found";
 const Booking = lazy(() => import("@/pages/booking"));
 const BeardBooking = lazy(() => import("@/pages/beard-booking"));
 const BeardHotTowelBooking = lazy(() => import("@/pages/beard-hot-towel-booking"));
+const HaircutBooking = lazy(() => import("@/pages/haircut-booking"));
 
 // Prefetch booking page chunks for instant navigation
 const preloadBooking = () => import('@/pages/booking');
@@ -42,6 +43,11 @@ function Router() {
       <Route path="/beard-hot-towel-booking">
         <Suspense fallback={<LoadingSpinner />}>
           <BeardHotTowelBooking />
+        </Suspense>
+      </Route>
+      <Route path="/haircut-booking">
+        <Suspense fallback={<LoadingSpinner />}>
+          <HaircutBooking />
         </Suspense>
       </Route>
       <Route component={NotFound} />

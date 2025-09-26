@@ -5,6 +5,7 @@ import { Link } from "wouter";
 const preloadBooking = () => import('@/pages/booking');
 const preloadBeardBooking = () => import('@/pages/beard-booking');
 const preloadBeardHotTowelBooking = () => import('@/pages/beard-hot-towel-booking');
+const preloadHaircutBooking = () => import('@/pages/haircut-booking');
 
 const individualServices = [
   {
@@ -135,6 +136,7 @@ export default function ServicesSection() {
                   <Link href={
                     service.title === "Beard" ? "/beard-booking" :
                     service.title === "Beard + Hot Towel" ? "/beard-hot-towel-booking" :
+                    service.title === "Haircut" ? "/haircut-booking" :
                     "/booking"
                   }>
                     <Button
@@ -143,16 +145,19 @@ export default function ServicesSection() {
                       onMouseEnter={
                         service.title === "Beard" ? preloadBeardBooking :
                         service.title === "Beard + Hot Towel" ? preloadBeardHotTowelBooking :
+                        service.title === "Haircut" ? preloadHaircutBooking :
                         preloadBooking
                       }
                       onFocus={
                         service.title === "Beard" ? preloadBeardBooking :
                         service.title === "Beard + Hot Towel" ? preloadBeardHotTowelBooking :
+                        service.title === "Haircut" ? preloadHaircutBooking :
                         preloadBooking
                       }
                       onTouchStart={
                         service.title === "Beard" ? preloadBeardBooking :
                         service.title === "Beard + Hot Towel" ? preloadBeardHotTowelBooking :
+                        service.title === "Haircut" ? preloadHaircutBooking :
                         preloadBooking
                       }
                     >
