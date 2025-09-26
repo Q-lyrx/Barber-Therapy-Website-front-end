@@ -4,6 +4,7 @@ import { Link } from "wouter";
 // Prefetch booking page chunks for instant navigation
 const preloadBooking = () => import('@/pages/booking');
 const preloadBeardBooking = () => import('@/pages/beard-booking');
+const preloadBeardHotTowelBooking = () => import('@/pages/beard-hot-towel-booking');
 
 const individualServices = [
   {
@@ -131,13 +132,29 @@ export default function ServicesSection() {
                     <span className="text-brand-gold font-semibold text-sm">{service.duration}</span>
                     <span className="text-xl font-bold text-brand-white">{service.price}</span>
                   </div>
-                  <Link href={service.title === "Beard" ? "/beard-booking" : "/booking"}>
+                  <Link href={
+                    service.title === "Beard" ? "/beard-booking" :
+                    service.title === "Beard + Hot Towel" ? "/beard-hot-towel-booking" :
+                    "/booking"
+                  }>
                     <Button
                       className="w-full bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-colors duration-300 font-semibold text-sm py-2"
                       data-testid={`button-book-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      onMouseEnter={service.title === "Beard" ? preloadBeardBooking : preloadBooking}
-                      onFocus={service.title === "Beard" ? preloadBeardBooking : preloadBooking}
-                      onTouchStart={service.title === "Beard" ? preloadBeardBooking : preloadBooking}
+                      onMouseEnter={
+                        service.title === "Beard" ? preloadBeardBooking :
+                        service.title === "Beard + Hot Towel" ? preloadBeardHotTowelBooking :
+                        preloadBooking
+                      }
+                      onFocus={
+                        service.title === "Beard" ? preloadBeardBooking :
+                        service.title === "Beard + Hot Towel" ? preloadBeardHotTowelBooking :
+                        preloadBooking
+                      }
+                      onTouchStart={
+                        service.title === "Beard" ? preloadBeardBooking :
+                        service.title === "Beard + Hot Towel" ? preloadBeardHotTowelBooking :
+                        preloadBooking
+                      }
                     >
                       Book Now
                     </Button>

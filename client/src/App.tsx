@@ -8,6 +8,7 @@ import NotFound from "@/pages/not-found";
 // Lazy load the booking pages for code splitting
 const Booking = lazy(() => import("@/pages/booking"));
 const BeardBooking = lazy(() => import("@/pages/beard-booking"));
+const BeardHotTowelBooking = lazy(() => import("@/pages/beard-hot-towel-booking"));
 
 // Prefetch booking page chunks for instant navigation
 const preloadBooking = () => import('@/pages/booking');
@@ -36,6 +37,11 @@ function Router() {
       <Route path="/beard-booking">
         <Suspense fallback={<LoadingSpinner />}>
           <BeardBooking />
+        </Suspense>
+      </Route>
+      <Route path="/beard-hot-towel-booking">
+        <Suspense fallback={<LoadingSpinner />}>
+          <BeardHotTowelBooking />
         </Suspense>
       </Route>
       <Route component={NotFound} />
