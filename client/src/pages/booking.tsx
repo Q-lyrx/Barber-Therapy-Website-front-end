@@ -7,13 +7,17 @@ export default function Booking() {
   useEffect(() => {
     // Load Calendly script dynamically
     const script = document.createElement('script');
+    script.type = 'text/javascript';
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
     document.head.appendChild(script);
 
     return () => {
-      // Cleanup script on unmount
-      document.head.removeChild(script);
+      // Cleanup script on unmount if it exists
+      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+      if (existingScript) {
+        document.head.removeChild(existingScript);
+      }
     };
   }, []);
 
@@ -56,14 +60,13 @@ export default function Booking() {
           {/* Calendly Integration */}
           <div className="bg-brand-black rounded-lg p-8 mb-8">
             <div className="bg-brand-white rounded-lg overflow-hidden">
-              {/* Calendly Embed */}
+              {/* Calendly inline widget */}
               <div 
                 className="calendly-inline-widget" 
-                data-url="https://calendly.com/mujahidlila313/line-up?background_color=1a1a1a&text_color=ffd700&primary_color=ffd700" 
+                data-url="https://calendly.com/mujahidlila313/line-up?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700" 
                 style={{
                   minWidth: "320px",
-                  height: "700px",
-                  width: "100%"
+                  height: "700px"
                 }}
               >
                 {/* Fallback content */}
