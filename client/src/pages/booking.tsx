@@ -1,46 +1,18 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import { useEffect, useState } from "react";
-
-// Declare Calendly for TypeScript
-declare global {
-  interface Window {
-    Calendly?: {
-      initInlineWidget: (options: { url: string }) => void;
-    };
-  }
-}
+import { useEffect } from "react";
 
 export default function Booking() {
-  const [scriptLoaded, setScriptLoaded] = useState(false);
-
   useEffect(() => {
-    // Check if Calendly script is already loaded
-    if ((window as any).Calendly) {
-      setScriptLoaded(true);
-      return;
+    // Load Calendly script if not already loaded
+    if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) {
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      document.head.appendChild(script);
     }
-
-    // Load Calendly script dynamically
-    const script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    
-    script.onload = () => {
-      setScriptLoaded(true);
-    };
-    
-    document.head.appendChild(script);
-
-    return () => {
-      // Cleanup script on unmount if it exists
-      const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
-      if (existingScript && document.head.contains(existingScript)) {
-        document.head.removeChild(existingScript);
-      }
-    };
   }, []);
 
   return (
@@ -86,23 +58,12 @@ export default function Booking() {
 
           {/* Calendly Integration */}
           <div className="bg-brand-black rounded-lg p-4 mb-8">
-            {!scriptLoaded && (
-              <div className="flex items-center justify-center h-96 bg-brand-black rounded-lg">
-                <div className="text-center p-8">
-                  <div className="w-12 h-12 border-3 border-brand-gold border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-                  <p className="text-brand-white">Loading booking calendar...</p>
-                </div>
-              </div>
-            )}
-            
-            {/* Calendly inline widget */}
             <div 
               className="calendly-inline-widget" 
-              data-url="https://calendly.com/mujahidlila313/line-up?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700" 
+              data-url="https://calendly.com/mujahidlila313/line-up?hide_gdpr_banner=1&text_color=ffd700&primary_color=ffd700" 
               style={{
                 minWidth: "320px",
-                height: "700px",
-                display: scriptLoaded ? 'block' : 'none'
+                height: "700px"
               }}
             ></div>
           </div>
