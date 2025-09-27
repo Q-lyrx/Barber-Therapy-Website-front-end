@@ -11,6 +11,7 @@ const preloadHaircutBeardHotTowelBooking = () => import('@/pages/haircut-beard-h
 const preloadFullServiceBooking = () => import('@/pages/full-service-booking');
 const preloadUltimatePackageBooking = () => import('@/pages/ultimate-package-booking');
 const preloadEssentialsPackageBooking = () => import('@/pages/essentials-package-booking');
+const preloadTagTeamPackageBooking = () => import('@/pages/tag-team-package-booking');
 
 const individualServices = [
   {
@@ -220,33 +221,48 @@ export default function ServicesSection() {
                   <div className="text-brand-white/70 mb-6 text-sm leading-relaxed whitespace-pre-line">
                     {packageItem.description}
                   </div>
-                  <Link href={
-                    packageItem.title === "The Ultimate Package" ? "/ultimate-package-booking" :
-                    packageItem.title === "The Essentials Package" ? "/essentials-package-booking" :
-                    "/booking"
-                  }>
-                    <Button
-                      className="w-full bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-colors duration-300 font-semibold"
-                      data-testid={`button-book-package-${packageItem.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      onMouseEnter={
-                        packageItem.title === "The Ultimate Package" ? preloadUltimatePackageBooking :
-                        packageItem.title === "The Essentials Package" ? preloadEssentialsPackageBooking :
-                        preloadBooking
-                      }
-                      onFocus={
-                        packageItem.title === "The Ultimate Package" ? preloadUltimatePackageBooking :
-                        packageItem.title === "The Essentials Package" ? preloadEssentialsPackageBooking :
-                        preloadBooking
-                      }
-                      onTouchStart={
-                        packageItem.title === "The Ultimate Package" ? preloadUltimatePackageBooking :
-                        packageItem.title === "The Essentials Package" ? preloadEssentialsPackageBooking :
-                        preloadBooking
-                      }
-                    >
-                      Book Package
-                    </Button>
-                  </Link>
+                  {packageItem.title === "Custom Package" ? (
+                    <a href="tel:647-746-7861">
+                      <Button
+                        className="w-full bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-colors duration-300 font-semibold"
+                        data-testid={`button-call-${packageItem.title.toLowerCase().replace(/\s+/g, '-')}`}
+                      >
+                        Call Now
+                      </Button>
+                    </a>
+                  ) : (
+                    <Link href={
+                      packageItem.title === "The Ultimate Package" ? "/ultimate-package-booking" :
+                      packageItem.title === "The Essentials Package" ? "/essentials-package-booking" :
+                      packageItem.title === "The Tag Team Package" ? "/tag-team-package-booking" :
+                      "/booking"
+                    }>
+                      <Button
+                        className="w-full bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-colors duration-300 font-semibold"
+                        data-testid={`button-book-package-${packageItem.title.toLowerCase().replace(/\s+/g, '-')}`}
+                        onMouseEnter={
+                          packageItem.title === "The Ultimate Package" ? preloadUltimatePackageBooking :
+                          packageItem.title === "The Essentials Package" ? preloadEssentialsPackageBooking :
+                          packageItem.title === "The Tag Team Package" ? preloadTagTeamPackageBooking :
+                          preloadBooking
+                        }
+                        onFocus={
+                          packageItem.title === "The Ultimate Package" ? preloadUltimatePackageBooking :
+                          packageItem.title === "The Essentials Package" ? preloadEssentialsPackageBooking :
+                          packageItem.title === "The Tag Team Package" ? preloadTagTeamPackageBooking :
+                          preloadBooking
+                        }
+                        onTouchStart={
+                          packageItem.title === "The Ultimate Package" ? preloadUltimatePackageBooking :
+                          packageItem.title === "The Essentials Package" ? preloadEssentialsPackageBooking :
+                          packageItem.title === "The Tag Team Package" ? preloadTagTeamPackageBooking :
+                          preloadBooking
+                        }
+                      >
+                        Book Package
+                      </Button>
+                    </Link>
+                  )}
                 </div>
               </div>
             ))}
