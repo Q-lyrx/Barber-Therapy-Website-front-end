@@ -1,0 +1,72 @@
+Reducing the download time of images can improve the perceived load time of the page and LCP. Learn more about optimizing image sizeLCPFCP
+URL
+Resource Size
+Est Savings
+replit.dev 1st Party
+629.6 KiB	501.7 KiB
+…gallery/gallery-1.webp(46796a2b-4f3d-404c-9f8b-a58e8c8bfb01-00-1i14uvyty3q84.spock.replit.dev)
+80.8 KiB
+70.1 KiB
+Increasing the image compression factor could improve this image's download size.
+32.3 KiB
+This image file is larger than it needs to be (465x640) for its displayed dimensions (256x256). Use responsive images to reduce the image download size.
+63.0 KiB
+…gallery/gallery-10.webp(46796a2b-4f3d-404c-9f8b-a58e8c8bfb01-00-1i14uvyty3q84.spock.replit.dev)
+73.1 KiB
+56.5 KiB
+Increasing the image compression factor could improve this image's download size.
+6.5 KiB
+This image file is larger than it needs to be (640x640) for its displayed dimensions (320x320). Use responsive images to reduce the image download size.
+54.9 KiB
+…assets/barber-therapy-logo.png(46796a2b-4f3d-404c-9f8b-a58e8c8bfb01-00-1i14uvyty3q84.spock.replit.dev)
+53.4 KiB
+53.1 KiB
+This image file is larger than it needs to be (830x554) for its displayed dimensions (60x40). Use responsive images to reduce the image download size.
+53.1 KiB
+…gallery/gallery-2.webp(46796a2b-4f3d-404c-9f8b-a58e8c8bfb01-00-1i14uvyty3q84.spock.replit.dev)
+56.2 KiB
+45.5 KiB
+Increasing the image compression factor could improve this image's download size.
+7.7 KiB
+This image file is larger than it needs to be (465x640) for its displayed dimensions (256x256). Use responsive images to reduce the image download size.
+43.8 KiB
+…responsive/barbershop-hero-mobile.webp(46796a2b-4f3d-404c-9f8b-a58e8c8bfb01-00-1i14uvyty3q84.spock.replit.dev)
+58.4 KiB
+43.2 KiB
+Increasing the image compression factor could improve this image's download size.
+43.2 KiB
+…gallery/gallery-7.webp(46796a2b-4f3d-404c-9f8b-a58e8c8bfb01-00-1i14uvyty3q84.spock.replit.dev)
+47.8 KiB
+35.8 KiB
+This image file is larger than it needs to be (640x640) for its displayed dimensions (320x320). Use responsive images to reduce the image download size.
+35.8 KiB
+…gallery/gallery-5.webp(46796a2b-4f3d-404c-9f8b-a58e8c8bfb01-00-1i14uvyty3q84.spock.replit.dev)
+47.6 KiB
+35.7 KiB
+This image file is larger than it needs to be (640x640) for its displayed dimensions (320x320). Use responsive images to reduce the image download size.
+35.7 KiB
+…gallery/gallery-6.webp(46796a2b-4f3d-404c-9f8b-a58e8c8bfb01-00-1i14uvyty3q84.spock.replit.dev)
+46.2 KiB
+34.7 KiB
+This image file is larger than it needs to be (640x640) for its displayed dimensions (320x320). Use responsive images to reduce the image download size.
+34.7 KiB
+…gallery/gallery-3.webp(46796a2b-4f3d-404c-9f8b-a58e8c8bfb01-00-1i14uvyty3q84.spock.replit.dev)
+43.2 KiB
+33.6 KiB
+This image file is larger than it needs to be (465x640) for its displayed dimensions (256x256). Use responsive images to reduce the image download size.
+33.6 KiB
+…gallery/gallery-8.webp(46796a2b-4f3d-404c-9f8b-a58e8c8bfb01-00-1i14uvyty3q84.spock.replit.dev)
+44.3 KiB
+33.2 KiB
+This image file is larger than it needs to be (640x640) for its displayed dimensions (320x320). Use responsive images to reduce the image download size.
+33.2 KiB
+…gallery/gallery-4.webp(46796a2b-4f3d-404c-9f8b-a58e8c8bfb01-00-1i14uvyty3q84.spock.replit.dev)
+41.0 KiB
+32.0 KiB
+This image file is larger than it needs to be (465x640) for its displayed dimensions (256x256). Use responsive images to reduce the image download size.
+32.0 KiB
+…gallery/gallery-9.webp(46796a2b-4f3d-404c-9f8b-a58e8c8bfb01-00-1i14uvyty3q84.spock.replit.dev)
+37.8 KiB
+28.3 KiB
+This image file is larger than it needs to be (640x640) for its displayed dimensions (320x320). Use responsive images to reduce the image download size.
+28.3 KiB
