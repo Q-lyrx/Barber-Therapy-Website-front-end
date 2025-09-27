@@ -89,6 +89,7 @@ const GalleryCarousel = memo(function GalleryCarousel({ images, onImageClick }: 
               src={image}
               alt={`Barbershop work ${index + 5}`}
               className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer"
+              loading="lazy"
               onClick={() => onImageClick(index + 4)} // +4 because carousel starts after first 4 images
             />
           </div>

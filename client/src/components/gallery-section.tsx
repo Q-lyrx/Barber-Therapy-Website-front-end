@@ -46,6 +46,7 @@ export default function GallerySection() {
                 src={image}
                 alt={`Featured barbershop work ${index + 1}`}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer"
+                loading="lazy"
                 onClick={() => openLightbox(index)}
               />
             </div>

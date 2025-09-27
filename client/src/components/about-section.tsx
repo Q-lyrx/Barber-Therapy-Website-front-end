@@ -61,6 +61,7 @@ export default function AboutSection() {
               src={aboutBarberImage}
               alt="Professional barber at work at Barber Therapy" 
               className="rounded-lg shadow-2xl w-full h-auto object-cover"
+              loading="lazy"
               data-testid="img-about-barber"
             />
           </div>
