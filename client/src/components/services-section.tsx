@@ -222,7 +222,6 @@ export default function ServicesSection() {
                   <div className="text-brand-white/70 mb-6 text-sm leading-relaxed whitespace-pre-line">
                     {packageItem.description}
                   </div>
-                  {
                   <Link href={
                     packageItem.title === "The Ultimate Package" ? "/ultimate-package-booking" :
                     packageItem.title === "The Essentials Package" ? "/essentials-package-booking" :
