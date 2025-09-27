@@ -1,18 +1,23 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+import { setupCalendlyWidget } from "@/utils/calendly";
 
 export default function EssentialsPackageBooking() {
+  const containerRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // Load Calendly script if not already loaded
-    if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) {
-      const script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = 'https://assets.calendly.com/assets/external/widget.js';
-      script.async = true;
-      document.head.appendChild(script);
-    }
+    const calendlyUrl = 'https://calendly.com/mujahidlila313/hot-towel-115?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700';
+    
+    setupCalendlyWidget(containerRef.current, calendlyUrl);
+
+    return () => {
+      // Cleanup on unmount
+      if (containerRef.current) {
+        containerRef.current.innerHTML = '';
+      }
+    };
   }, []);
 
   return (
@@ -58,14 +63,13 @@ export default function EssentialsPackageBooking() {
 
           {/* Calendly Integration */}
           <div className="bg-brand-black rounded-lg p-4 mb-8">
-            <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/mujahidlila313/hot-towel-115?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700"
-              data-resize="true"
+            <div 
+              ref={containerRef}
+              className="calendly-container"
               style={{
-                minWidth: '320px',
-                height: '700px',
-                width: '100%'
+                minWidth: "320px",
+                height: "700px",
+                width: "100%"
               }}
             ></div>
           </div>
