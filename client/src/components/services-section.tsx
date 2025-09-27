@@ -9,6 +9,8 @@ const preloadHaircutBooking = () => import('@/pages/haircut-booking');
 const preloadHaircutBeardBooking = () => import('@/pages/haircut-beard-booking');
 const preloadHaircutBeardHotTowelBooking = () => import('@/pages/haircut-beard-hot-towel-booking');
 const preloadFullServiceBooking = () => import('@/pages/full-service-booking');
+const preloadUltimatePackageBooking = () => import('@/pages/ultimate-package-booking');
+const preloadEssentialsPackageBooking = () => import('@/pages/essentials-package-booking');
 
 const individualServices = [
   {
@@ -218,13 +220,29 @@ export default function ServicesSection() {
                   <div className="text-brand-white/70 mb-6 text-sm leading-relaxed whitespace-pre-line">
                     {packageItem.description}
                   </div>
-                  <Link href="/booking">
+                  <Link href={
+                    packageItem.title === "The Ultimate Package" ? "/ultimate-package-booking" :
+                    packageItem.title === "The Essentials Package" ? "/essentials-package-booking" :
+                    "/booking"
+                  }>
                     <Button
                       className="w-full bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-colors duration-300 font-semibold"
                       data-testid={`button-book-package-${packageItem.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      onMouseEnter={preloadBooking}
-                      onFocus={preloadBooking}
-                      onTouchStart={preloadBooking}
+                      onMouseEnter={
+                        packageItem.title === "The Ultimate Package" ? preloadUltimatePackageBooking :
+                        packageItem.title === "The Essentials Package" ? preloadEssentialsPackageBooking :
+                        preloadBooking
+                      }
+                      onFocus={
+                        packageItem.title === "The Ultimate Package" ? preloadUltimatePackageBooking :
+                        packageItem.title === "The Essentials Package" ? preloadEssentialsPackageBooking :
+                        preloadBooking
+                      }
+                      onTouchStart={
+                        packageItem.title === "The Ultimate Package" ? preloadUltimatePackageBooking :
+                        packageItem.title === "The Essentials Package" ? preloadEssentialsPackageBooking :
+                        preloadBooking
+                      }
                     >
                       Book Package
                     </Button>
