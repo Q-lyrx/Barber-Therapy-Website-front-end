@@ -23,20 +23,20 @@ export default function HeroSection() {
         />
       </picture>
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" />
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="inline-block rounded-xl sm:rounded-2xl lg:rounded-3xl bg-black/35 backdrop-blur-[2px] px-4 py-4 sm:px-8 sm:py-6 md:px-12 md:py-8 lg:px-16 lg:py-12 shadow-2xl ring-1 ring-white/5 max-w-[90vw] sm:max-w-none">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 lg:mb-8 leading-tight animate-fade-in-up drop-shadow-2xl">
+      <div className="relative z-10 text-center max-w-7xl mx-auto px-3 sm:px-6">
+        <div className="inline-block rounded-2xl sm:rounded-3xl lg:rounded-[2rem] bg-black/35 backdrop-blur-[2px] px-6 py-6 sm:px-12 sm:py-10 md:px-16 md:py-12 lg:px-20 lg:py-16 xl:px-24 xl:py-20 shadow-2xl ring-1 ring-white/5 max-w-[95vw] sm:max-w-none">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold mb-6 sm:mb-8 lg:mb-10 xl:mb-12 leading-tight animate-fade-in-up drop-shadow-2xl">
           <span className="text-brand-gold drop-shadow-2xl">Experience</span><br />
           <span className="text-brand-white drop-shadow-2xl">Barber</span><br />
           <span className="text-brand-gold drop-shadow-2xl">Therapy</span>
         </h1>
-        <p className="text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl text-brand-white/95 mb-6 sm:mb-8 lg:mb-10 font-light leading-relaxed animate-fade-in-up drop-shadow-lg max-w-4xl mx-auto">
+        <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-brand-white/95 mb-8 sm:mb-10 lg:mb-12 xl:mb-14 font-light leading-relaxed animate-fade-in-up drop-shadow-lg max-w-5xl mx-auto">
           A space where you can transform both your look and your mindset all at once. It is more than just a haircut.
         </p>
         <div className="flex justify-center animate-fade-in-up">
           <Button 
             onClick={scrollToServices}
-            className="bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-all duration-300 transform hover:scale-105 px-4 py-3 sm:px-8 sm:py-4 md:px-10 md:py-5 lg:px-12 lg:py-6 text-sm sm:text-lg md:text-xl lg:text-2xl font-semibold"
+            className="bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-all duration-300 transform hover:scale-105 px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 lg:px-16 lg:py-8 xl:px-20 xl:py-10 text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold"
           >
             Our clippers got PhDs in glow ups.
           </Button>
