@@ -137,3 +137,41 @@ html {
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out;
 }
+
+/* Calendly Responsive Styles for Mobile & Desktop */
+.calendly-inline-widget {
+  overflow: hidden !important;
+  border-radius: 8px;
+}
+
+/* Mobile Portrait - Small screens */
+@media only screen and (max-width: 413px) {
+  .calendly-inline-widget {
+    height: 1300px !important;
+    min-height: 1300px !important;
+  }
+}
+
+/* Mobile Landscape & Small tablets */
+@media only screen and (min-width: 414px) and (max-width: 780px) {
+  .calendly-inline-widget {
+    height: 1200px !important;
+    min-height: 1200px !important;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 781px) and (max-width: 1060px) {
+  .calendly-inline-widget {
+    height: 1050px !important;
+    min-height: 1050px !important;
+  }
+}
+
+/* Desktop and larger screens */
+@media only screen and (min-width: 1061px) {
+  .calendly-inline-widget {
+    height: 950px !important;
+    min-height: 950px !important;
+  }
+}
