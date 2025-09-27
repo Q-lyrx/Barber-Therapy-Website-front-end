@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import barbershopHeroImage from "@/assets/images/barbershop-hero.webp";
+import barbershopHeroMobile from "@/assets/images/responsive/barbershop-hero-mobile.webp";
+import barbershopHeroTablet from "@/assets/images/responsive/barbershop-hero-tablet.webp";
 
 export default function HeroSection() {
   const scrollToServices = () => {
@@ -8,13 +10,19 @@ export default function HeroSection() {
 
   return (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div 
-        className="absolute inset-0 bg-cover bg-no-repeat brightness-75 contrast-110" 
-        style={{
-          backgroundImage: `url(${barbershopHeroImage})`,
-          backgroundPosition: 'center 40%'
-        }}
-      />
+      <picture className="absolute inset-0">
+        <source media="(max-width: 768px)" srcSet={barbershopHeroMobile} />
+        <source media="(max-width: 1280px)" srcSet={barbershopHeroTablet} />
+        <img 
+          src={barbershopHeroImage}
+          alt="Barber Therapy interior"
+          className="w-full h-full object-cover brightness-75 contrast-110"
+          style={{ objectPosition: 'center 40%' }}
+          fetchPriority="high"
+          decoding="async"
+          loading="eager"
+        />
+      </picture>
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80" />
       <div className="relative z-10 text-center max-w-4xl mx-auto px-6">
         <div className="inline-block rounded-2xl bg-black/35 backdrop-blur-[2px] px-6 py-6 md:px-10 md:py-8 shadow-2xl ring-1 ring-white/5">
