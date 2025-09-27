@@ -61,9 +61,11 @@ export default function BeardHotTowelBooking() {
             <div
               className="calendly-inline-widget"
               data-url="https://calendly.com/mujahidlila313/beard-hot-towel-25?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700"
+              data-resize="true"
               style={{
                 minWidth: '320px',
-                height: '700px'
+                height: '700px',
+                width: '100%'
               }}
             ></div>
           </div>
