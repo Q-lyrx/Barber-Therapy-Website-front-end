@@ -148,7 +148,7 @@ export default function PrivacyPolicy() {
               </p>
               <div className="mt-4 space-y-2 text-brand-white/90">
                 <p><strong>Phone:</strong> 647-746-7861</p>
-                <p><strong>Address:</strong> 123 Barber Street, Toronto, ON</p>
+                <p><strong>Address:</strong> 34 Denlow Drive, Brampton, ON L6Y2L4</p>
               </div>
             </section>
 
