@@ -175,3 +175,51 @@ html {
     min-height: 950px !important;
   }
 }
+
+/* Mobile Container Optimizations */
+@media only screen and (max-width: 768px) {
+  /* Booking page container optimizations */
+  .max-w-4xl {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Reduce padding on mobile for better space utilization */
+  .px-6 {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+  
+  /* Calendly container mobile optimizations */
+  .bg-brand-black.rounded-lg {
+    margin-left: -0.5rem;
+    margin-right: -0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+  /* Mobile header optimizations */
+  .h-20 {
+    height: 4rem !important;
+  }
+  
+  /* Mobile text scaling */
+  .text-3xl, .text-4xl {
+    font-size: 1.875rem !important;
+    line-height: 2.25rem !important;
+  }
+}
+
+/* Small mobile devices */
+@media only screen and (max-width: 480px) {
+  /* Extra padding reduction for very small screens */
+  .px-6, .lg\:px-8 {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+  }
+  
+  /* Ensure full width utilization */
+  .calendly-inline-widget {
+    margin-left: -0.25rem;
+    margin-right: -0.25rem;
+  }
+}
