@@ -1,23 +1,18 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import { useEffect, useRef } from "react";
-import { setupCalendlyWidget } from "@/utils/calendly";
+import { useEffect } from "react";
 
 export default function HaircutBooking() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const calendlyUrl = 'https://calendly.com/mujahidlila313/haircut-40?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700';
-    
-    setupCalendlyWidget(containerRef.current, calendlyUrl);
-
-    return () => {
-      // Cleanup on unmount
-      if (containerRef.current) {
-        containerRef.current.innerHTML = '';
-      }
-    };
+    // Load Calendly script if not already loaded
+    if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) {
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      document.head.appendChild(script);
+    }
   }, []);
 
   return (
@@ -63,13 +58,14 @@ export default function HaircutBooking() {
 
           {/* Calendly Integration */}
           <div className="bg-brand-black rounded-lg p-4 mb-8">
-            <div 
-              ref={containerRef}
-              className="calendly-container"
+            <div
+              className="calendly-inline-widget"
+              data-url="https://calendly.com/mujahidlila313/haircut-40?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700"
+              data-resize="true"
               style={{
-                minWidth: "320px",
-                height: "700px",
-                width: "100%"
+                minWidth: '320px',
+                height: '700px',
+                width: '100%'
               }}
             ></div>
           </div>
