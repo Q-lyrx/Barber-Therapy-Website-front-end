@@ -1,3 +1,5 @@
+import { Link } from "wouter";
+
 export default function Footer() {
   return (
     <footer className="bg-brand-black border-t border-brand-gold/20 py-16">
@@ -49,6 +51,7 @@ export default function Footer() {
               <a href="#about" className="block hover:text-brand-gold transition-colors duration-300">About Us</a>
               <a href="#testimonials" className="block hover:text-brand-gold transition-colors duration-300">Testimonials</a>
               <a href="#contact" className="block hover:text-brand-gold transition-colors duration-300">Contact</a>
+              <Link href="/privacy-policy" className="block hover:text-brand-gold transition-colors duration-300">Privacy Policy</Link>
             </div>
           </div>
         </div>
