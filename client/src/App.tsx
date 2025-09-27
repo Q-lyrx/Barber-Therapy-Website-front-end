@@ -17,6 +17,7 @@ const UltimatePackageBooking = lazy(() => import("@/pages/ultimate-package-booki
 const EssentialsPackageBooking = lazy(() => import("@/pages/essentials-package-booking"));
 const TagTeamPackageBooking = lazy(() => import("@/pages/tag-team-package-booking"));
 const CustomPackageBooking = lazy(() => import("@/pages/custom-package-booking"));
+const PrivacyPolicy = lazy(() => import("@/pages/privacy-policy"));
 
 // Prefetch booking page chunks for instant navigation
 const preloadBooking = () => import('@/pages/booking');
@@ -90,6 +91,11 @@ function Router() {
       <Route path="/custom-package-booking">
         <Suspense fallback={<LoadingSpinner />}>
           <CustomPackageBooking />
+        </Suspense>
+      </Route>
+      <Route path="/privacy-policy">
+        <Suspense fallback={<LoadingSpinner />}>
+          <PrivacyPolicy />
         </Suspense>
       </Route>
       <Route component={NotFound} />
