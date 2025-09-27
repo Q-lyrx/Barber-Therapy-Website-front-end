@@ -13,13 +13,11 @@ export default function HeroSection() {
       <picture className="absolute inset-0">
         <source media="(max-width: 768px)" srcSet={barbershopHeroMobile} />
         <source media="(max-width: 1280px)" srcSet={barbershopHeroTablet} />
-        <img 
+        <img
           src={barbershopHeroImage}
           alt="Barber Therapy interior"
           className="w-full h-full object-cover brightness-75 contrast-110"
           style={{ objectPosition: 'center 40%' }}
-          width="1920"
-          height="1080"
           decoding="async"
           loading="eager"
         />
@@ -36,7 +34,7 @@ export default function HeroSection() {
           A space where you can transform both your look and your mindset all at once. It is more than just a haircut.
         </p>
         <div className="flex justify-center animate-fade-in-up">
-          <Button 
+          <Button
             onClick={scrollToServices}
             className="bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-all duration-300 transform hover:scale-105 px-6 py-4 sm:px-10 sm:py-5 md:px-12 md:py-6 lg:px-16 lg:py-8 xl:px-20 xl:py-10 text-base sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold"
           >
