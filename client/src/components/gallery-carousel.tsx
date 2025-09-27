@@ -85,13 +85,21 @@ const GalleryCarousel = memo(function GalleryCarousel({ images, onImageClick }: 
             className="flex-shrink-0 w-80 h-80 cursor-pointer group overflow-hidden rounded-lg"
             data-testid={`carousel-image-${index}`}
           >
-            <img
-              src={image}
-              alt={`Barbershop work ${index + 5}`}
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer"
-              loading="lazy"
-              onClick={() => onImageClick(index + 4)} // +4 because carousel starts after first 4 images
-            />
+            <picture>
+              <source 
+                srcSet={`/src/assets/gallery/responsive/gallery-${index + 5}-small.webp 256w, /src/assets/gallery/responsive/gallery-${index + 5}-medium.webp 320w`}
+                sizes="(max-width: 768px) 256px, 320px"
+              />
+              <img
+                src={image}
+                alt={`Barbershop work ${index + 5}`}
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer"
+                width="320"
+                height="320"
+                loading="lazy"
+                onClick={() => onImageClick(index + 4)} // +4 because carousel starts after first 4 images
+              />
+            </picture>
           </div>
         ))}
       </div>

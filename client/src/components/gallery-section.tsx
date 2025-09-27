@@ -6,15 +6,19 @@ export default function GallerySection() {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
-  // Dynamic image loading for better performance - only load when needed
+  // Dynamic image loading with responsive sizing for better performance
   const allImages = useMemo(() => {
     return Array.from({ length: 13 }, (_, index) => 
       `/src/assets/gallery/gallery-${index + 1}.webp`
     );
   }, []);
 
-  const featuredImages = useMemo(() => allImages.slice(0, 4), [allImages]);
-  const carouselImages = useMemo(() => allImages.slice(4), [allImages]);
+  // Responsive image variants for optimized loading
+  const carouselImages = useMemo(() => {
+    return Array.from({ length: 9 }, (_, index) => 
+      `/src/assets/gallery/responsive/gallery-${index + 5}-medium.webp`
+    );
+  }, []);
 
   const openLightbox = (index: number) => {
     setLightboxIndex(index);
@@ -36,19 +40,27 @@ export default function GallerySection() {
 
         {/* Featured Images Grid (First 4) */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          {featuredImages.map((image, index) => (
+          {Array.from({ length: 4 }, (_, index) => (
             <div 
               key={index}
               className="group cursor-pointer overflow-hidden rounded-lg h-64"
               data-testid={`featured-image-${index}`}
             >
-              <img
-                src={image}
-                alt={`Featured barbershop work ${index + 1}`}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer"
-                loading="lazy"
-                onClick={() => openLightbox(index)}
-              />
+              <picture>
+                <source 
+                  srcSet={`/src/assets/gallery/responsive/gallery-${index + 1}-small.webp 256w, /src/assets/gallery/responsive/gallery-${index + 1}-medium.webp 320w`}
+                  sizes="(max-width: 768px) 256px, 320px"
+                />
+                <img
+                  src={`/src/assets/gallery/responsive/gallery-${index + 1}-medium.webp`}
+                  alt={`Featured barbershop work ${index + 1}`}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer"
+                  width="320"
+                  height="320"
+                  loading="lazy"
+                  onClick={() => openLightbox(index)}
+                />
+              </picture>
             </div>
           ))}
         </div>

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
-import logoImage from "../assets/barber-therapy-logo.png";
+import logoImage from "../assets/optimized/barber-therapy-logo-small.png";
 
 export default function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

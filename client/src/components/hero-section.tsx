@@ -18,6 +18,8 @@ export default function HeroSection() {
           alt="Barber Therapy interior"
           className="w-full h-full object-cover brightness-75 contrast-110"
           style={{ objectPosition: 'center 40%' }}
+          width="1920"
+          height="1080"
           decoding="async"
           loading="eager"
         />
