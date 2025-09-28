@@ -31,7 +31,7 @@ export default function HeroSection() {
           <span className="text-brand-gold drop-shadow-2xl">Therapy</span>
         </h1>
         <p className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-brand-white/95 mb-8 sm:mb-10 lg:mb-12 xl:mb-14 font-light leading-relaxed animate-fade-in-up drop-shadow-lg max-w-5xl mx-auto">
-          A space where you can transform both your look and your mindset all at once. It is more than just a haircut.
+          A space where you can transform both your look and your mindset all at once. It's more than just a haircut.
         </p>
         <div className="flex justify-center animate-fade-in-up">
           <Button
