@@ -1,6 +1,5 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
-import { visualizer } from "rollup-plugin-visualizer";
+import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
@@ -8,12 +7,6 @@ export default defineConfig({
   assetsInclude: ['**/*.webp', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
   plugins: [
     react(),
-    visualizer({
-      filename: "dist/stats.html",
-      open: false,
-      gzipSize: true,
-      brotliSize: true,
-    }),
   ],
   resolve: {
     alias: {
