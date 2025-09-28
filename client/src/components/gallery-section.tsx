@@ -9,14 +9,14 @@ export default function GallerySection() {
   // Dynamic image loading with responsive sizing for better performance
   const allImages = useMemo(() => {
     return Array.from({ length: 13 }, (_, index) => 
-      `/src/assets/gallery/gallery-${index + 1}.webp`
+      `/gallery/gallery-${index + 1}.webp`
     );
   }, []);
 
   // Responsive image variants for optimized loading
   const carouselImages = useMemo(() => {
     return Array.from({ length: 9 }, (_, index) => 
-      `/src/assets/gallery/responsive/gallery-${index + 5}-medium.webp`
+      `/gallery/responsive/gallery-${index + 5}-medium.webp`
     );
   }, []);
 
@@ -48,11 +48,11 @@ export default function GallerySection() {
             >
               <picture>
                 <source 
-                  srcSet={`/src/assets/gallery/responsive/gallery-${index + 1}-small.webp 256w, /src/assets/gallery/responsive/gallery-${index + 1}-medium.webp 320w`}
+                  srcSet={`/gallery/responsive/gallery-${index + 1}-small.webp 256w, /gallery/responsive/gallery-${index + 1}-medium.webp 320w`}
                   sizes="(max-width: 768px) 256px, 320px"
                 />
                 <img
-                  src={`/src/assets/gallery/responsive/gallery-${index + 1}-medium.webp`}
+                  src={`/gallery/responsive/gallery-${index + 1}-medium.webp`}
                   alt={`Featured barbershop work ${index + 1}`}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500 cursor-pointer"
                   width="320"

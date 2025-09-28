@@ -4,6 +4,8 @@ import { visualizer } from "rollup-plugin-visualizer";
 import path from "path";
 
 export default defineConfig({
+  base: "/",
+  assetsInclude: ['**/*.webp', '**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
   plugins: [
     react(),
     visualizer({
@@ -16,6 +18,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),
+      "@assets": path.resolve(__dirname, "src/assets"),
     },
   },
   build: {

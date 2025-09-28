@@ -87,7 +87,7 @@ const GalleryCarousel = memo(function GalleryCarousel({ images, onImageClick }: 
           >
             <picture>
               <source 
-                srcSet={`/src/assets/gallery/responsive/gallery-${index + 5}-small.webp 256w, /src/assets/gallery/responsive/gallery-${index + 5}-medium.webp 320w`}
+                srcSet={`/gallery/responsive/gallery-${index + 5}-small.webp 256w, /gallery/responsive/gallery-${index + 5}-medium.webp 320w`}
                 sizes="(max-width: 768px) 256px, 320px"
               />
               <img
