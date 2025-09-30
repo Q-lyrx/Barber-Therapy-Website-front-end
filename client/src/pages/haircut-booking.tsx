@@ -1,17 +1,60 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+
+declare global {
+  interface Window {
+    Calendly: any;
+  }
+}
 
 export default function HaircutBooking() {
+  const calendlyRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // Load Calendly script if not already loaded
-    if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) {
+    const calendlyUrl = 'https://calendly.com/mujahidlila313/haircut-40?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700';
+    
+    const loadCalendly = () => {
       const script = document.createElement('script');
       script.type = 'text/javascript';
       script.src = 'https://assets.calendly.com/assets/external/widget.js';
       script.async = true;
+      script.onload = () => {
+        if (window.Calendly && calendlyRef.current) {
+          window.Calendly.initInlineWidget({
+            url: calendlyUrl,
+            parentElement: calendlyRef.current,
+            prefill: {},
+            utm: {}
+          });
+        }
+      };
       document.head.appendChild(script);
+    };
+
+    if (window.Calendly && calendlyRef.current) {
+      window.Calendly.initInlineWidget({
+        url: calendlyUrl,
+        parentElement: calendlyRef.current,
+        prefill: {},
+        utm: {}
+      });
+    } else if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) {
+      loadCalendly();
+    } else {
+      const checkCalendly = setInterval(() => {
+        if (window.Calendly && calendlyRef.current) {
+          window.Calendly.initInlineWidget({
+            url: calendlyUrl,
+            parentElement: calendlyRef.current,
+            prefill: {},
+            utm: {}
+          });
+          clearInterval(checkCalendly);
+        }
+      }, 100);
+      return () => clearInterval(checkCalendly);
     }
   }, []);
 
@@ -59,9 +102,7 @@ export default function HaircutBooking() {
           {/* Calendly Integration */}
           <div className="bg-brand-black rounded-lg p-4 mb-8">
             <div
-              className="calendly-inline-widget"
-              data-url="https://calendly.com/mujahidlila313/haircut-40?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700"
-              data-resize="true"
+              ref={calendlyRef}
               style={{
                 minWidth: '320px',
                 height: '700px',

@@ -1,17 +1,62 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
+
+declare global {
+  interface Window {
+    Calendly: any;
+  }
+}
 
 export default function Booking() {
+  const calendlyRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // Load Calendly script if not already loaded
-    if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) {
+    const loadCalendly = () => {
       const script = document.createElement('script');
       script.type = 'text/javascript';
       script.src = 'https://assets.calendly.com/assets/external/widget.js';
       script.async = true;
+      script.onload = () => {
+        // Initialize widget after script loads
+        if (window.Calendly && calendlyRef.current) {
+          window.Calendly.initInlineWidget({
+            url: 'https://calendly.com/mujahidlila313/line-up?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700',
+            parentElement: calendlyRef.current,
+            prefill: {},
+            utm: {}
+          });
+        }
+      };
       document.head.appendChild(script);
+    };
+
+    // Check if Calendly is already loaded
+    if (window.Calendly && calendlyRef.current) {
+      window.Calendly.initInlineWidget({
+        url: 'https://calendly.com/mujahidlila313/line-up?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700',
+        parentElement: calendlyRef.current,
+        prefill: {},
+        utm: {}
+      });
+    } else if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) {
+      loadCalendly();
+    } else {
+      // Script is loading, wait for it
+      const checkCalendly = setInterval(() => {
+        if (window.Calendly && calendlyRef.current) {
+          window.Calendly.initInlineWidget({
+            url: 'https://calendly.com/mujahidlila313/line-up?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700',
+            parentElement: calendlyRef.current,
+            prefill: {},
+            utm: {}
+          });
+          clearInterval(checkCalendly);
+        }
+      }, 100);
+
+      return () => clearInterval(checkCalendly);
     }
   }, []);
 
@@ -59,9 +104,7 @@ export default function Booking() {
           {/* Calendly Integration */}
           <div className="bg-brand-black rounded-lg p-4 mb-8">
             <div 
-              className="calendly-inline-widget" 
-              data-url="https://calendly.com/mujahidlila313/line-up?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700" 
-              data-resize="true"
+              ref={calendlyRef}
               style={{
                 minWidth: "320px",
                 height: "700px",
