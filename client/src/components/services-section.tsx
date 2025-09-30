@@ -1,18 +1,4 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "wouter";
-
-// Prefetch booking page chunks for instant navigation
-const preloadBooking = () => import('@/pages/booking');
-const preloadBeardBooking = () => import('@/pages/beard-booking');
-const preloadBeardHotTowelBooking = () => import('@/pages/beard-hot-towel-booking');
-const preloadHaircutBooking = () => import('@/pages/haircut-booking');
-const preloadHaircutBeardBooking = () => import('@/pages/haircut-beard-booking');
-const preloadHaircutBeardHotTowelBooking = () => import('@/pages/haircut-beard-hot-towel-booking');
-const preloadFullServiceBooking = () => import('@/pages/full-service-booking');
-const preloadUltimatePackageBooking = () => import('@/pages/ultimate-package-booking');
-const preloadEssentialsPackageBooking = () => import('@/pages/essentials-package-booking');
-const preloadTagTeamPackageBooking = () => import('@/pages/tag-team-package-booking');
-const preloadCustomPackageBooking = () => import('@/pages/custom-package-booking');
 
 const individualServices = [
   {
@@ -140,7 +126,7 @@ export default function ServicesSection() {
                     <span className="text-brand-gold font-semibold text-sm">{service.duration}</span>
                     <span className="text-xl font-bold text-brand-white">{service.price}</span>
                   </div>
-                  <Link href={
+                  <a href={
                     service.title === "Beard" ? "/beard-booking" :
                     service.title === "Beard + Hot Towel" ? "/beard-hot-towel-booking" :
                     service.title === "Haircut" ? "/haircut-booking" :
@@ -152,37 +138,10 @@ export default function ServicesSection() {
                     <Button
                       className="w-full bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-colors duration-300 font-semibold text-sm py-2"
                       data-testid={`button-book-${service.title.toLowerCase().replace(/\s+/g, '-')}`}
-                      onMouseEnter={
-                        service.title === "Beard" ? preloadBeardBooking :
-                        service.title === "Beard + Hot Towel" ? preloadBeardHotTowelBooking :
-                        service.title === "Haircut" ? preloadHaircutBooking :
-                        service.title === "Haircut + Beard" ? preloadHaircutBeardBooking :
-                        service.title === "Haircut + Beard and Hot Towel" ? preloadHaircutBeardHotTowelBooking :
-                        service.title === "Full-Service" ? preloadFullServiceBooking :
-                        preloadBooking
-                      }
-                      onFocus={
-                        service.title === "Beard" ? preloadBeardBooking :
-                        service.title === "Beard + Hot Towel" ? preloadBeardHotTowelBooking :
-                        service.title === "Haircut" ? preloadHaircutBooking :
-                        service.title === "Haircut + Beard" ? preloadHaircutBeardBooking :
-                        service.title === "Haircut + Beard and Hot Towel" ? preloadHaircutBeardHotTowelBooking :
-                        service.title === "Full-Service" ? preloadFullServiceBooking :
-                        preloadBooking
-                      }
-                      onTouchStart={
-                        service.title === "Beard" ? preloadBeardBooking :
-                        service.title === "Beard + Hot Towel" ? preloadBeardHotTowelBooking :
-                        service.title === "Haircut" ? preloadHaircutBooking :
-                        service.title === "Haircut + Beard" ? preloadHaircutBeardBooking :
-                        service.title === "Haircut + Beard and Hot Towel" ? preloadHaircutBeardHotTowelBooking :
-                        service.title === "Full-Service" ? preloadFullServiceBooking :
-                        preloadBooking
-                      }
                     >
                       Book Now
                     </Button>
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
@@ -222,7 +181,7 @@ export default function ServicesSection() {
                   <div className="text-brand-white/70 mb-6 text-sm leading-relaxed whitespace-pre-line">
                     {packageItem.description}
                   </div>
-                  <Link href={
+                  <a href={
                     packageItem.title === "The Ultimate Package" ? "/ultimate-package-booking" :
                     packageItem.title === "The Essentials Package" ? "/essentials-package-booking" :
                     packageItem.title === "The Tag Team Package" ? "/tag-team-package-booking" :
@@ -232,31 +191,10 @@ export default function ServicesSection() {
                       <Button
                         className="w-full bg-brand-gold text-brand-black hover:bg-brand-dark-gold transition-colors duration-300 font-semibold"
                         data-testid={`button-book-package-${packageItem.title.toLowerCase().replace(/\s+/g, '-')}`}
-                        onMouseEnter={
-                          packageItem.title === "The Ultimate Package" ? preloadUltimatePackageBooking :
-                          packageItem.title === "The Essentials Package" ? preloadEssentialsPackageBooking :
-                          packageItem.title === "The Tag Team Package" ? preloadTagTeamPackageBooking :
-                          packageItem.title === "Custom Package" ? preloadCustomPackageBooking :
-                          preloadBooking
-                        }
-                        onFocus={
-                          packageItem.title === "The Ultimate Package" ? preloadUltimatePackageBooking :
-                          packageItem.title === "The Essentials Package" ? preloadEssentialsPackageBooking :
-                          packageItem.title === "The Tag Team Package" ? preloadTagTeamPackageBooking :
-                          packageItem.title === "Custom Package" ? preloadCustomPackageBooking :
-                          preloadBooking
-                        }
-                        onTouchStart={
-                          packageItem.title === "The Ultimate Package" ? preloadUltimatePackageBooking :
-                          packageItem.title === "The Essentials Package" ? preloadEssentialsPackageBooking :
-                          packageItem.title === "The Tag Team Package" ? preloadTagTeamPackageBooking :
-                          packageItem.title === "Custom Package" ? preloadCustomPackageBooking :
-                          preloadBooking
-                        }
                       >
                         Book Package
                       </Button>
-                    </Link>
+                    </a>
                 </div>
               </div>
             ))}
