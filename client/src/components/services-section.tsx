@@ -56,25 +56,25 @@ const monthlyPackages = [
   {
     icon: "fas fa-trophy",
     title: "The Ultimate Package",
-    description: "2 Full Services ($70 each value)\n2 Lineups ($15 each value)\nTotal Value of $170\nYou Save $20 in Services",
+    description: "2 Full Services ($80 each value)\nTotal Value of $160\nYou Save $20 in Services",
     duration: "VALID FOR 1 MONTH (30 DAYS)",
-    price: "$150",
+    price: "$140",
     savings: "You Save $20"
   },
   {
     icon: "fas fa-star",
     title: "The Essentials Package",
-    description: "2 Haircuts with Beard and Hot Towel ($50 each value)\n2 Lineups ($15 each value)\nTotal Value of $130\nYou Save $15 in Services",
+    description: "2 Haircuts with Beard and Hot Towel ($55 each value)\n2 Lineups ($15 each value)\nTotal Value of $140\nYou Save $20 in Services",
     duration: "VALID FOR 1 MONTH (30 DAYS)",
-    price: "$115",
-    savings: "You Save $15"
+    price: "$120",
+    savings: "You Save $20"
   },
   {
     icon: "fas fa-users",
     title: "The Tag Team Package",
-    description: "2 People Required\n4 Haircuts with Beard and Hot Towel (2 each alternating weeks)\nTotal Value of $200\nYou Save $40 in Services",
+    description: "4 Haircuts with Beard and Hot Towel\nTotal Value of $220\nYou Save $40 in Services",
     duration: "VALID FOR 1 MONTH (30 DAYS)",
-    price: "$160",
+    price: "$180",
     savings: "You Save $40"
   },
   {
