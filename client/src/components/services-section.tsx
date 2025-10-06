@@ -72,7 +72,7 @@ const monthlyPackages = [
   {
     icon: "fas fa-users",
     title: "The Tag Team Package",
-    description: "2 People Required\n4 Haircuts with Beard and Hot Towel\nTotal Value of $220\nYou Save $40 in Services",
+    description: "2 People Required\n4 Haircuts with Beard and Hot Towel (2 each alternating weeks)\nTotal Value of $220\nYou Save $40 in Services",
     duration: "VALID FOR 1 MONTH (30 DAYS)",
     price: "$180",
     savings: "You Save $40"
