@@ -69,6 +69,8 @@ The application is fully configured as a frontend-only static website with no ba
 
 ### External Services
 - **Calendly Integration**: Embedded booking widget for appointments
+- **Google Analytics 4**: Website analytics and visitor tracking (G-0WQ6ML9BQ6)
+- **Google Search Console**: SEO verification and performance monitoring (googlecc4c1b6c1c7ce802)
 - **Google Fonts**: Playfair Display and Montserrat typography
 - **Compressed Images**: WebP optimized barbershop photography
 
@@ -84,6 +86,7 @@ This project is optimized for static hosting platforms with all configuration fi
 - Auto-deployment from Git repository
 - SPA routing with redirects configured
 - Configuration file: `netlify.toml`
+- Domain redirect: `/lineup-booking` → `/booking` (301 permanent redirect)
 
 **Vercel Deployment:**
 - Framework: Vite
@@ -107,6 +110,9 @@ This project is optimized for static hosting platforms with all configuration fi
 
 ## Changelog
 
+- October 26, 2025: Added Google Analytics 4 (G-0WQ6ML9BQ6) and Google Search Console verification (googlecc4c1b6c1c7ce802)
+- October 26, 2025: Implemented domain redirect from /lineup-booking to /booking (301 permanent)
+- October 26, 2025: Updated Tag Team Package description to include alternating weeks scheduling detail
 - September 25, 2025: Cleaned up project structure for frontend-only static deployment
 - September 24, 2025: Removed all backend code and configured for static hosting
 - September 24, 2025: Implemented comprehensive gallery with WebP image compression
