@@ -69,7 +69,7 @@ The application is fully configured as a frontend-only static website with no ba
 
 ### External Services
 - **Calendly Integration**: Embedded booking widget for appointments
-- **Google Analytics 4**: Website analytics and visitor tracking (G-0WQ6ML9BQ6)
+- **Google Analytics 4**: Website analytics and visitor tracking (G-LJ7GE8CH4G)
 - **Google Search Console**: SEO verification and performance monitoring (googlecc4c1b6c1c7ce802)
 - **Google Fonts**: Playfair Display and Montserrat typography
 - **Compressed Images**: WebP optimized barbershop photography
@@ -110,7 +110,9 @@ This project is optimized for static hosting platforms with all configuration fi
 
 ## Changelog
 
-- October 26, 2025: Added Google Analytics 4 (G-0WQ6ML9BQ6) and Google Search Console verification (googlecc4c1b6c1c7ce802)
+- November 1, 2025: Updated Google Analytics 4 measurement ID to G-LJ7GE8CH4G
+- November 1, 2025: Updated review count from 90+ to 99+ in About section
+- October 26, 2025: Added Google Analytics 4 and Google Search Console verification (googlecc4c1b6c1c7ce802)
 - October 26, 2025: Implemented domain redirect from /lineup-booking to /booking (301 permanent)
 - October 26, 2025: Updated Tag Team Package description to include alternating weeks scheduling detail
 - September 25, 2025: Cleaned up project structure for frontend-only static deployment
