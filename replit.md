@@ -86,7 +86,9 @@ This project is optimized for static hosting platforms with all configuration fi
 - Auto-deployment from Git repository
 - SPA routing with redirects configured
 - Configuration file: `netlify.toml`
-- Domain redirect: `/lineup-booking` → `/booking` (301 permanent redirect)
+- Domain redirects (301 permanent):
+  - `/lineup-booking` → `/` (main page)
+  - `/services/` → `/` (main page)
 
 **Vercel Deployment:**
 - Framework: Vite
@@ -110,6 +112,7 @@ This project is optimized for static hosting platforms with all configuration fi
 
 ## Changelog
 
+- November 1, 2025: Added domain redirects for /lineup-booking and /services/ to main page for SEO optimization
 - November 1, 2025: Updated Google Analytics 4 measurement ID to G-LJ7GE8CH4G
 - November 1, 2025: Updated review count from 90+ to 99+ in About section
 - October 26, 2025: Added Google Analytics 4 and Google Search Console verification (googlecc4c1b6c1c7ce802)
