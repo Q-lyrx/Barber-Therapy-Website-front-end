@@ -48,11 +48,11 @@ export default function TagTeamPackageBooking() {
                 <i className="fas fa-clock text-brand-gold mr-2"></i>1 Month (30 Days)
               </span>
               <span className="text-brand-white text-lg font-semibold">
-                <i className="fas fa-dollar-sign text-brand-gold mr-2"></i>$160
+                <i className="fas fa-dollar-sign text-brand-gold mr-2"></i>$210
               </span>
             </div>
             <p className="text-lg text-brand-white/90 mb-6 max-w-xl mx-auto">
-              Book your Tag Team Package and save $40 with a friend.
+              Book your Tag Team Package and save $50 with a friend.
             </p>
           </div>
 

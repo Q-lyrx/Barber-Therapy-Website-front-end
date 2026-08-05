@@ -48,11 +48,11 @@ export default function EssentialsPackageBooking() {
                 <i className="fas fa-clock text-brand-gold mr-2"></i>1 Month (30 Days)
               </span>
               <span className="text-brand-white text-lg font-semibold">
-                <i className="fas fa-dollar-sign text-brand-gold mr-2"></i>$115
+                <i className="fas fa-dollar-sign text-brand-gold mr-2"></i>$150
               </span>
             </div>
             <p className="text-lg text-brand-white/90 mb-6 max-w-xl mx-auto">
-              Book your Essentials Package and save $15 on essential services.
+              Book your Essentials Package and save $20 on essential services.
             </p>
           </div>
 
