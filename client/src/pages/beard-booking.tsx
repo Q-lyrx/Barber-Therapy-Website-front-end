@@ -84,7 +84,7 @@ export default function BeardBooking() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <div className="text-center mb-8">
             <h1 className="text-3xl md:text-4xl font-bold text-brand-gold mb-4">
-              Beard Service
+              Beard + Line Up Service
             </h1>
             <div className="flex justify-center items-center gap-6 mb-4">
               <span className="text-brand-white text-lg font-semibold">

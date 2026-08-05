@@ -10,7 +10,7 @@ const individualServices = [
   },
   {
     icon: "fas fa-user-tie",
-    title: "Beard",
+    title: "Beard + Line Up",
     description: "Expert beard trimming and shaping for a polished look.",
     duration: "30 mins",
     price: "$30"
