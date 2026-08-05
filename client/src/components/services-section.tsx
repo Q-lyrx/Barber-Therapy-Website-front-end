@@ -13,42 +13,42 @@ const individualServices = [
     title: "Beard",
     description: "Expert beard trimming and shaping for a polished look.",
     duration: "30 mins",
-    price: "$20"
+    price: "$30"
   },
   {
     icon: "fas fa-fire",
     title: "Beard + Hot Towel",
     description: "Premium beard service with a relaxing hot towel treatment.",
     duration: "30 mins",
-    price: "$25"
+    price: "$35"
   },
   {
     icon: "fas fa-scissors",
     title: "Haircut",
     description: "Premium haircut with expert scissor work and styling.",
     duration: "45 mins",
-    price: "$40"
+    price: "$50"
   },
   {
     icon: "fas fa-crown",
     title: "Haircut + Beard",
     description: "Complete grooming with precision haircut and beard trimming.",
     duration: "1 hour",
-    price: "$50"
+    price: "$60"
   },
   {
     icon: "fas fa-spa",
     title: "Haircut + Beard and Hot Towel",
     description: "Premium service with a soothing hot towel treatment.",
     duration: "1 hour",
-    price: "$55"
+    price: "$65"
   },
   {
     icon: "fas fa-gem",
     title: "Full-Service",
     description: "Complete luxury experience including haircut, beard trimming, razor lineup, hot towel, oil head massage, black mask facial, eyebrow shaping, and nose/ear hair waxing.",
     duration: "1.5 hours",
-    price: "$80"
+    price: "$100"
   }
 ];
 

@@ -91,7 +91,7 @@ export default function HaircutBooking() {
                 <i className="fas fa-clock text-brand-gold mr-2"></i>45 minutes
               </span>
               <span className="text-brand-white text-lg font-semibold">
-                <i className="fas fa-dollar-sign text-brand-gold mr-2"></i>$40
+                <i className="fas fa-dollar-sign text-brand-gold mr-2"></i>$50
               </span>
             </div>
             <p className="text-lg text-brand-white/90 mb-6 max-w-xl mx-auto">

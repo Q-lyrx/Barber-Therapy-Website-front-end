@@ -48,7 +48,7 @@ export default function BeardHotTowelBooking() {
                 <i className="fas fa-clock text-brand-gold mr-2"></i>30 minutes
               </span>
               <span className="text-brand-white text-lg font-semibold">
-                <i className="fas fa-dollar-sign text-brand-gold mr-2"></i>$25
+                <i className="fas fa-dollar-sign text-brand-gold mr-2"></i>$35
               </span>
             </div>
             <p className="text-lg text-brand-white/90 mb-6 max-w-xl mx-auto">
