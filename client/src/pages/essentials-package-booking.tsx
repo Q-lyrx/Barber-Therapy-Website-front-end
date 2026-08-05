@@ -5,14 +5,15 @@ import { useEffect } from "react";
 
 export default function EssentialsPackageBooking() {
   useEffect(() => {
-    // Load Calendly script if not already loaded
-    if (!document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]')) {
-      const script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src = 'https://assets.calendly.com/assets/external/widget.js';
-      script.async = true;
-      document.head.appendChild(script);
-    }
+    // Load Calendly script
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://assets.calendly.com/assets/external/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
 
   return (
@@ -60,7 +61,7 @@ export default function EssentialsPackageBooking() {
           <div className="bg-brand-black rounded-lg p-4 mb-8">
             <div
               className="calendly-inline-widget"
-              data-url="https://calendly.com/mujahidlila313/hot-towel-115?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700"
+              data-url="https://calendly.com/mujahidlila313/the-ultimate-package?hide_gdpr_banner=1&background_color=1a1a1a&text_color=ffd700&primary_color=ffd700"
               data-resize="true"
               style={{
                 minWidth: '320px',
