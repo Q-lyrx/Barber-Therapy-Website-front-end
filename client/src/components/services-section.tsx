@@ -127,7 +127,7 @@ export default function ServicesSection() {
                     <span className="text-xl font-bold text-brand-white">{service.price}</span>
                   </div>
                   <a href={
-                    service.title === "Beard" ? "/beard-booking" :
+                    service.title === "Beard + Line Up" ? "/beard-booking" :
                     service.title === "Beard + Hot Towel" ? "/beard-hot-towel-booking" :
                     service.title === "Haircut" ? "/haircut-booking" :
                     service.title === "Haircut + Beard" ? "/haircut-beard-booking" :
