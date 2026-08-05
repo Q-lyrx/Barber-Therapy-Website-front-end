@@ -6,7 +6,7 @@ const individualServices = [
     title: "Line Up",
     description: "Clean, defined lineup to sharpen your appearance.",
     duration: "15 mins",
-    price: "$15"
+    price: "$20"
   },
   {
     icon: "fas fa-user-tie",
